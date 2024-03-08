@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>模组简介 - CreativePageJump</title>
+      <link href="/2024/03/08/intro-creativepagejump/"/>
+      <url>/2024/03/08/intro-creativepagejump/</url>
+      
+        <content type="html"><![CDATA[<h1 id="创造物品栏页码跳转-CreativePageJump"><a href="#创造物品栏页码跳转-CreativePageJump" class="headerlink" title="创造物品栏页码跳转 CreativePageJump"></a>创造物品栏页码跳转 CreativePageJump</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>允许直接编辑创造模式物品栏的页码以跳转至指定页面。</p><h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><table><thead><tr><th align="center">名称</th><th align="left">链接</th></tr></thead><tbody><tr><td align="center">GitHub</td><td align="left"><a href="https://github.com/srcres258/CreativePageJump/">https://github.com/srcres258/CreativePageJump/</a></td></tr><tr><td align="center">MC百科</td><td align="left">即将发布</td></tr><tr><td align="center">CurseForge</td><td align="left"><a href="https://www.curseforge.com/minecraft/mc-mods/creativepagejump">https://www.curseforge.com/minecraft/mc-mods/creativepagejump</a></td></tr><tr><td align="center">Modrinth</td><td align="left"><a href="https://modrinth.com/mod/creativepagejump">https://modrinth.com/mod/creativepagejump</a></td></tr></tbody></table><h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>该模组允许编辑创造模式物品栏上的页码以直接跳转至指定页面，无需再繁复地点击翻页按钮。<br><br><strong>该模组只能在客户端上使用。</strong> 尝试在专用服务端上加载此模组将会导致崩溃。<br></p><img src="/2024/03/08/intro-creativepagejump/ss1.png" class="" title="Screenshot 1"><h1 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h1><p>本项目使用 <a href="https://spdx.org/licenses/LGPL-3.0-only.html">GNU Lesser General Public License v3.0 only</a> 授权。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 模组简介 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 模组简介 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>模组简介 - CreativeTabSearch</title>
       <link href="/2024/02/29/intro-creativetabsearch/"/>
       <url>/2024/02/29/intro-creativetabsearch/</url>
