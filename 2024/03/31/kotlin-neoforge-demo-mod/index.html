@@ -19,25 +19,26 @@
         <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
     
     <meta name="description" content="123">
-    <meta name="description" content="创造物品栏页码跳转 CreativePageJump概述允许直接编辑创造模式物品栏的页码以跳转至指定页面。 相关链接   名称 链接    GitHub https:&#x2F;&#x2F;github.com&#x2F;srcres258&#x2F;CreativePageJump&#x2F;   MC百科 https:&#x2F;&#x2F;www.mcmod.cn&#x2F;class&#x2F;14009.html   CurseForge https:&#x2F;&#x2F;www.cursef">
+    <meta name="description" content="前言Kotlin 是由 JetBrains 推出的一门基于 JVM 平台的编程语言，引入了许多不同于 Java 的先进概念以及语法糖，极大地提高了开发人员的编程效率，广受各路 Java 开发者推崇。但由于 NeoForge 官方并未就使用 Kotlin 开发模组提供支持，使得精通 Kotlin 的开发者未能使用所擅长的语言编写模组而被迫改用 Java 。幸运的是借助 thedarkcolour 开">
 <meta property="og:type" content="article">
-<meta property="og:title" content="模组简介 - CreativePageJump">
-<meta property="og:url" content="https://blog.srcres.top/2024/03/08/intro-creativepagejump/index.html">
+<meta property="og:title" content="使用 Kotlin 语言开发 NeoForge 模组">
+<meta property="og:url" content="https://blog.srcres.top/2024/03/31/kotlin-neoforge-demo-mod/index.html">
 <meta property="og:site_name" content="src_resources&#39; Blog">
-<meta property="og:description" content="创造物品栏页码跳转 CreativePageJump概述允许直接编辑创造模式物品栏的页码以跳转至指定页面。 相关链接   名称 链接    GitHub https:&#x2F;&#x2F;github.com&#x2F;srcres258&#x2F;CreativePageJump&#x2F;   MC百科 https:&#x2F;&#x2F;www.mcmod.cn&#x2F;class&#x2F;14009.html   CurseForge https:&#x2F;&#x2F;www.cursef">
+<meta property="og:description" content="前言Kotlin 是由 JetBrains 推出的一门基于 JVM 平台的编程语言，引入了许多不同于 Java 的先进概念以及语法糖，极大地提高了开发人员的编程效率，广受各路 Java 开发者推崇。但由于 NeoForge 官方并未就使用 Kotlin 开发模组提供支持，使得精通 Kotlin 的开发者未能使用所擅长的语言编写模组而被迫改用 Java 。幸运的是借助 thedarkcolour 开">
 <meta property="og:locale">
-<meta property="og:image" content="https://blog.srcres.top/2024/03/08/intro-creativepagejump/ss1.png">
-<meta property="article:published_time" content="2024-03-08T14:17:01.000Z">
-<meta property="article:modified_time" content="2024-03-08T14:17:01.000Z">
+<meta property="og:image" content="https://blog.srcres.top/2024/03/31/kotlin-neoforge-demo-mod/ss.png">
+<meta property="article:published_time" content="2024-03-31T06:18:34.000Z">
+<meta property="article:modified_time" content="2024-03-31T06:18:34.000Z">
 <meta property="article:author" content="src_resources">
-<meta property="article:tag" content="模组简介">
+<meta property="article:tag" content="Kotlin">
+<meta property="article:tag" content="NeoForge">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog.srcres.top/2024/03/08/intro-creativepagejump/ss1.png">
+<meta name="twitter:image" content="https://blog.srcres.top/2024/03/31/kotlin-neoforge-demo-mod/ss.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon-avatar.ico">
     
-    <title>模组简介 - CreativePageJump · src_resources&#39;s Blog</title>
+    <title>使用 Kotlin 语言开发 NeoForge 模组 · src_resources&#39;s Blog</title>
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
 - testing support for link[rel=preload]
@@ -263,7 +264,7 @@
                 <a href="/">src_resources&#39;s Blog</a>
             </div>
             <div class="post-title header-element">
-                <a href="#" class="post-name">模组简介 - CreativePageJump</a>
+                <a href="#" class="post-name">使用 Kotlin 语言开发 NeoForge 模组</a>
             </div>
         </div>
     
@@ -309,7 +310,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-                模组简介 - CreativePageJump
+                使用 Kotlin 语言开发 NeoForge 模组
             <!-- 404 -->
             
         </h1>
@@ -329,7 +330,9 @@
                     <div class= post-intro-tags >
     
     
-        <a class="post-tag" href="javascript:void(0);" data-tags="模组简介">模组简介</a>
+        <a class="post-tag" href="javascript:void(0);" data-tags="Kotlin">Kotlin</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="NeoForge">NeoForge</a>
     
 </div>
 
@@ -337,13 +340,13 @@
                 <!-- 文章字数统计 -->
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">166</span>阅读时长: <span class="post-count reading-time">1 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">1.3k</span>阅读时长: <span class="post-count reading-time">7 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
                     <!-- 撰写日期 -->
                     <span class="iconfont-archer post-intro-calander">&#xe676;</span>
-                    <span class="post-intro-time">2024/03/08</span>
+                    <span class="post-intro-time">2024/03/31</span>
                     <!-- busuanzi -->
                     
                         <span id="busuanzi_container_page_pv" class="busuanzi-pv">
@@ -498,44 +501,33 @@
             <div class="container container-unloaded">
                 <main class="main post-page">
     <article class="article-entry">
-        <h1 id="创造物品栏页码跳转-CreativePageJump"><a href="#创造物品栏页码跳转-CreativePageJump" class="headerlink" title="创造物品栏页码跳转 CreativePageJump"></a>创造物品栏页码跳转 CreativePageJump</h1><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>允许直接编辑创造模式物品栏的页码以跳转至指定页面。</p>
-<h2 id="相关链接"><a href="#相关链接" class="headerlink" title="相关链接"></a>相关链接</h2><table>
-<thead>
-<tr>
-<th align="center">名称</th>
-<th align="left">链接</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">GitHub</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://github.com/srcres258/CreativePageJump/">https://github.com/srcres258/CreativePageJump/</a></td>
-</tr>
-<tr>
-<td align="center">MC百科</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.mcmod.cn/class/14009.html">https://www.mcmod.cn/class/14009.html</a></td>
-</tr>
-<tr>
-<td align="center">CurseForge</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://www.curseforge.com/minecraft/mc-mods/creativepagejump">https://www.curseforge.com/minecraft/mc-mods/creativepagejump</a></td>
-</tr>
-<tr>
-<td align="center">Modrinth</td>
-<td align="left"><a target="_blank" rel="noopener" href="https://modrinth.com/mod/creativepagejump">https://modrinth.com/mod/creativepagejump</a></td>
-</tr>
-</tbody></table>
-<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>该模组允许编辑创造模式物品栏上的页码以直接跳转至指定页面，无需再繁复地点击翻页按钮。<br><br><strong>该模组只能在客户端上使用。</strong> 尝试在专用服务端上加载此模组将会导致崩溃。<br></p>
-<img src="/2024/03/08/intro-creativepagejump/ss1.png" class="" title="Screenshot 1">
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Kotlin 是由 JetBrains 推出的一门基于 JVM 平台的编程语言，引入了许多不同于 Java 的先进概念以及语法糖，极大地提高了开发人员的编程效率，广受各路 Java 开发者推崇。但由于 NeoForge 官方并未就使用 Kotlin 开发模组提供支持，使得精通 Kotlin 的开发者未能使用所擅长的语言编写模组而被迫改用 Java 。幸运的是借助 <a target="_blank" rel="noopener" href="https://github.com/thedarkcolour/">thedarkcolour</a> 开发的 <a target="_blank" rel="noopener" href="https://github.com/thedarkcolour/KotlinForForge/">KotlinForForge</a> 前置模组，完全使用 Kotlin 语言开发 NeoForge 模组成为了可能。下面简要地就借助该前置模组开发 Kotlin 语言模组的步骤进行说明。</p>
+<h1 id="NeoForge-MDK-的搭建"><a href="#NeoForge-MDK-的搭建" class="headerlink" title="NeoForge MDK 的搭建"></a>NeoForge MDK 的搭建</h1><p>前往 NeoForge 的 <a target="_blank" rel="noopener" href="https://github.com/neoforged/MDK/">示例 MDK 仓库</a> 下载示例 NeoForge 模组源码。切换到所下载的源码目录中，先运行 <code>./gradlew runClient</code> 尝试启动游戏客户端程序， Gradle 会自动下载完成所需的依赖文件，成功启动游戏后关闭。接下来根据自己的 IDE 情况运行 <code>./gradlew eclipse</code> 或 <code>./gradlew idea</code> 进行 IDE 相关配置，完成后用 IDE 打开项目。至此 MDK 搭建完毕。</p>
+<h1 id="配置项目-Kotlin-相关依赖"><a href="#配置项目-Kotlin-相关依赖" class="headerlink" title="配置项目 Kotlin 相关依赖"></a>配置项目 Kotlin 相关依赖</h1><p>接下来需要对项目进行设置以引入 Kotlin 与前置模组 KotlinForForge 的支持。打开 <code>build.gradle</code> 文件，对 <code>plugins</code> 、 <code>repositories</code> 与 <code>dependencies</code> 代码块进行修改：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">plugins &#123;</span><br><span class="line">    id <span class="string">&#x27;java-library&#x27;</span></span><br><span class="line">    id <span class="string">&#x27;eclipse&#x27;</span></span><br><span class="line">    id <span class="string">&#x27;idea&#x27;</span></span><br><span class="line">    id <span class="string">&#x27;maven-publish&#x27;</span></span><br><span class="line">    id <span class="string">&#x27;net.neoforged.gradle.userdev&#x27;</span> version <span class="string">&#x27;7.0.80&#x27;</span></span><br><span class="line">    <span class="comment">// Adds the Kotlin Gradle plugin</span></span><br><span class="line">    id <span class="string">&#x27;org.jetbrains.kotlin.jvm&#x27;</span> version <span class="string">&#x27;1.9.22&#x27;</span></span><br><span class="line">    <span class="comment">// OPTIONAL Kotlin Serialization plugin</span></span><br><span class="line">    id <span class="string">&#x27;org.jetbrains.kotlin.plugin.serialization&#x27;</span> version <span class="string">&#x27;1.9.22&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">repositories &#123;</span><br><span class="line">    mavenLocal()</span><br><span class="line">    <span class="comment">// Add KFF Maven repository</span></span><br><span class="line">    maven &#123;</span><br><span class="line">        name = <span class="string">&#x27;Kotlin for Forge&#x27;</span></span><br><span class="line">        url = <span class="string">&#x27;https://thedarkcolour.github.io/KotlinForForge/&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">dependencies &#123;</span><br><span class="line">    <span class="comment">// Specify the version of Minecraft to use.</span></span><br><span class="line">    <span class="comment">// Depending on the plugin applied there are several options. We will assume you applied the userdev plugin as shown above.</span></span><br><span class="line">    <span class="comment">// The group for userdev is net.neoforged, the module name is neoforge, and the version is the same as the neoforge version.</span></span><br><span class="line">    <span class="comment">// You can however also use the vanilla plugin (net.neoforged.gradle.vanilla) to use a version of Minecraft without the neoforge loader.</span></span><br><span class="line">    <span class="comment">// And its provides the option to then use net.minecraft as the group, and one of; client, server or joined as the module name, plus the game version as version.</span></span><br><span class="line">    <span class="comment">// For all intends and purposes: You can treat this dependency as if it is a normal library you would use.</span></span><br><span class="line">    implementation <span class="string">&quot;net.neoforged:neoforge:$&#123;neo_version&#125;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Example mod dependency with JEI</span></span><br><span class="line">    <span class="comment">// The JEI API is declared for compile time use, while the full JEI artifact is used at runtime</span></span><br><span class="line">    <span class="comment">// compileOnly &quot;mezz.jei:jei-$&#123;mc_version&#125;-common-api:$&#123;jei_version&#125;&quot;</span></span><br><span class="line">    <span class="comment">// compileOnly &quot;mezz.jei:jei-$&#123;mc_version&#125;-forge-api:$&#123;jei_version&#125;&quot;</span></span><br><span class="line">    <span class="comment">// runtimeOnly &quot;mezz.jei:jei-$&#123;mc_version&#125;-forge:$&#123;jei_version&#125;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Example mod dependency using a mod jar from ./libs with a flat dir repository</span></span><br><span class="line">    <span class="comment">// This maps to ./libs/coolmod-$&#123;mc_version&#125;-$&#123;coolmod_version&#125;.jar</span></span><br><span class="line">    <span class="comment">// The group id is ignored when searching -- in this case, it is &quot;blank&quot;</span></span><br><span class="line">    <span class="comment">// implementation &quot;blank:coolmod-$&#123;mc_version&#125;:$&#123;coolmod_version&#125;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Example mod dependency using a file as dependency</span></span><br><span class="line">    <span class="comment">// implementation files(&quot;libs/coolmod-$&#123;mc_version&#125;-$&#123;coolmod_version&#125;.jar&quot;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Example project dependency using a sister or child project:</span></span><br><span class="line">    <span class="comment">// implementation project(&quot;:myproject&quot;)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// For more info:</span></span><br><span class="line">    <span class="comment">// http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html</span></span><br><span class="line">    <span class="comment">// http://www.gradle.org/docs/current/userguide/dependency_management.html</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// Adds KFF as dependency and Kotlin libs (use the variant matching your mod loader)</span></span><br><span class="line">    <span class="comment">// NEOFORGE</span></span><br><span class="line">    implementation <span class="string">&#x27;thedarkcolour:kotlinforforge-neoforge:4.10.0&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h1 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h1><p>本项目使用 <a target="_blank" rel="noopener" href="https://spdx.org/licenses/LGPL-3.0-only.html">GNU Lesser General Public License v3.0 only</a> 授权。</p>
+<p>接下来修改 <code>gradle.properties</code> 文件：</p>
+<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sets default memory used for gradle commands. Can be overridden by user or command line properties.</span></span><br><span class="line"><span class="comment">#org.gradle.jvmargs=</span></span><br><span class="line"><span class="attr">org.gradle.daemon</span>=<span class="string">false</span></span><br><span class="line"><span class="attr">org.gradle.debug</span>=<span class="string">false</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">#read more on this at https://github.com/neoforged/NeoGradle/blob/NG_7.0/README.md#apply-parchment-mappings</span></span><br><span class="line"><span class="comment"># you can also find the latest versions at: https://parchmentmc.org/docs/getting-started</span></span><br><span class="line"><span class="attr">neogradle.subsystems.parchment.minecraftVersion</span>=<span class="string">1.20.3</span></span><br><span class="line"><span class="attr">neogradle.subsystems.parchment.mappingsVersion</span>=<span class="string">2023.12.31</span></span><br><span class="line"><span class="comment"># Environment Properties</span></span><br><span class="line"><span class="comment"># You can find the latest versions here: https://projects.neoforged.net/neoforged/neoforge</span></span><br><span class="line"><span class="comment"># The Minecraft version must agree with the Neo version to get a valid artifact</span></span><br><span class="line"><span class="attr">minecraft_version</span>=<span class="string">1.20.4</span></span><br><span class="line"><span class="comment"># The Minecraft version range can use any release version of Minecraft as bounds.</span></span><br><span class="line"><span class="comment"># Snapshots, pre-releases, and release candidates are not guaranteed to sort properly</span></span><br><span class="line"><span class="comment"># as they do not follow standard versioning conventions.</span></span><br><span class="line"><span class="attr">minecraft_version_range</span>=<span class="string">[1.20.4,1.21)</span></span><br><span class="line"><span class="comment"># The Neo version must agree with the Minecraft version to get a valid artifact</span></span><br><span class="line"><span class="attr">neo_version</span>=<span class="string">20.4.215</span></span><br><span class="line"><span class="comment"># The Neo version range can use any version of Neo as bounds</span></span><br><span class="line"><span class="attr">neo_version_range</span>=<span class="string">[20.4,)</span></span><br><span class="line"><span class="comment"># The loader version range can only use the major version of FML as bounds</span></span><br><span class="line"><span class="attr">loader_version_range</span>=<span class="string">[4.10,)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">## Mod Properties</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"># The unique mod identifier for the mod. Must be lowercase in English locale. Must fit the regex [a-z][a-z0-9_]&#123;1,63&#125;</span></span><br><span class="line"><span class="comment"># Must match the String constant located in the main mod class annotated with @Mod.</span></span><br><span class="line"><span class="attr">mod_id</span>=<span class="string">kotlindemo</span></span><br><span class="line"><span class="comment"># The human-readable display name for the mod.</span></span><br><span class="line"><span class="attr">mod_name</span>=<span class="string">Kotlin NeoForge Demo Mod</span></span><br><span class="line"><span class="comment"># The license of the mod. Review your options at https://choosealicense.com/. All Rights Reserved is the default.</span></span><br><span class="line"><span class="attr">mod_license</span>=<span class="string">All Rights Reserved</span></span><br><span class="line"><span class="comment"># The mod version. See https://semver.org/</span></span><br><span class="line"><span class="attr">mod_version</span>=<span class="string">1.0.0</span></span><br><span class="line"><span class="comment"># The group ID for the mod. It is only important when publishing as an artifact to a Maven repository.</span></span><br><span class="line"><span class="comment"># This should match the base package used for the mod sources.</span></span><br><span class="line"><span class="comment"># See https://maven.apache.org/guides/mini/guide-naming-conventions.html</span></span><br><span class="line"><span class="attr">mod_group_id</span>=<span class="string">top.srcres.mods.kotlindemo</span></span><br><span class="line"><span class="comment"># The authors of the mod. This is a simple text string that is used for display purposes in the mod list.</span></span><br><span class="line"><span class="attr">mod_authors</span>=<span class="string">src_resources</span></span><br><span class="line"><span class="comment"># The description of the mod. This is a simple multiline text string that is used for display purposes in the mod list.</span></span><br><span class="line"><span class="attr">mod_description</span>=<span class="string">Example mod description.\nNewline characters can be used and will be replaced properly.</span></span><br></pre></td></tr></table></figure>
+
+<p>然后打开 <code>src</code> 目录内的 <code>mods.toml</code> 文件，修改 <code>modLoader</code> 为 <code>kotlinforforge</code> ：</p>
+<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">modLoader</span>=<span class="string">&quot;kotlinforforge&quot;</span> <span class="comment">#mandatory</span></span><br></pre></td></tr></table></figure>
+
+<p>接下来删除 <code>java</code> 目录，新建 <code>kotlin</code> 目录，即可在其中使用 Kotlin 语言编写代码了。笔者的示例代码如下：</p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> top.srcres.mods.kotlindemo</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.mojang.logging.LogUtils</span><br><span class="line"><span class="keyword">import</span> net.neoforged.fml.common.Mod</span><br><span class="line"></span><br><span class="line"><span class="meta">@Mod(KotlinDemo.MODID)</span></span><br><span class="line"><span class="keyword">object</span> KotlinDemo &#123;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">val</span> MODID = <span class="string">&quot;kotlindemo&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">val</span> logger = LogUtils.getLogger();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">init</span> &#123;</span><br><span class="line">        logger.info(<span class="string">&quot;<span class="variable">$MODID</span> is initialized.&quot;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>全部工作完成后，回到项目根目录，运行 <code>./gradlew runClient</code> 启动游戏。可以看到我们的示例模组已被正常加载：</p>
+<img src="/2024/03/31/kotlin-neoforge-demo-mod/ss.png" class="" title="Screenshot">
+
+<h1 id="项目源码"><a href="#项目源码" class="headerlink" title="项目源码"></a>项目源码</h1><p>本文示例项目源码已上传 <a target="_blank" rel="noopener" href="https://github.com/srcres258/kotlin-neoforge-demo-mod">GitHub</a> 供读者参考，使用 <a target="_blank" rel="noopener" href="https://spdx.org/licenses/MIT.html">MIT</a> 协议开源。</p>
 
     </article>
     <!-- license -->
     
         <div class="license-wrapper">
             <p>原文作者：<a href="https://blog.srcres.top">src_resources</a>
-            <p>原文链接：<a href="https://blog.srcres.top/2024/03/08/intro-creativepagejump/">https://blog.srcres.top/2024/03/08/intro-creativepagejump/</a>
-            <p>发表日期：<a href="https://blog.srcres.top/2024/03/08/intro-creativepagejump/">March 8th 2024, 10:17:01 pm</a>
-            <p>更新日期：<a href="https://blog.srcres.top/2024/03/08/intro-creativepagejump/">March 8th 2024, 10:17:01 pm</a>
+            <p>原文链接：<a href="https://blog.srcres.top/2024/03/31/kotlin-neoforge-demo-mod/">https://blog.srcres.top/2024/03/31/kotlin-neoforge-demo-mod/</a>
+            <p>发表日期：<a href="https://blog.srcres.top/2024/03/31/kotlin-neoforge-demo-mod/">March 31st 2024, 2:18:34 pm</a>
+            <p>更新日期：<a href="https://blog.srcres.top/2024/03/31/kotlin-neoforge-demo-mod/">March 31st 2024, 2:18:34 pm</a>
             <p>版权声明：This blog is licensed under <a rel="license noopener" target="_blank" href="https://spdx.org/licenses/CC-BY-NC-SA-4.0.html">Creative Commons Attribution Non Commercial Share Alike 4.0 International</a>.</p>
         </div>
     
@@ -543,17 +535,12 @@
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href="/2024/03/19/gdsxsj-syf/" title="高等数学随记 - 利用双元法求不定积分">
-                    <div class="nextTitle">高等数学随记 - 利用双元法求不定积分</div>
-                </a>
-            
         </li>
         <li class="previous">
             
                 <div class="prevSlogan">Previous Post</div>
-                <a href="/2024/02/29/intro-creativetabsearch/" title="模组简介 - CreativeTabSearch">
-                    <div class="prevTitle">模组简介 - CreativeTabSearch</div>
+                <a href="/2024/03/30/rust-jni-demo/" title="使用 Rust 语言编写 Java JNI 实现">
+                    <div class="prevTitle">使用 Rust 语言编写 Java JNI 实现</div>
                 </a>
             
         </li>
@@ -708,7 +695,7 @@
                 <div class="toc-catalog">
                     <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
                 </div>
-                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%9B%E9%80%A0%E7%89%A9%E5%93%81%E6%A0%8F%E9%A1%B5%E7%A0%81%E8%B7%B3%E8%BD%AC-CreativePageJump"><span class="toc-number">1.</span> <span class="toc-text">创造物品栏页码跳转 CreativePageJump</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%B8%E5%85%B3%E9%93%BE%E6%8E%A5"><span class="toc-number">1.2.</span> <span class="toc-text">相关链接</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">2.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%8F%E8%AE%AE"><span class="toc-number">3.</span> <span class="toc-text">协议</span></a></li></ol>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#NeoForge-MDK-%E7%9A%84%E6%90%AD%E5%BB%BA"><span class="toc-number">2.</span> <span class="toc-text">NeoForge MDK 的搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E9%A1%B9%E7%9B%AE-Kotlin-%E7%9B%B8%E5%85%B3%E4%BE%9D%E8%B5%96"><span class="toc-number">3.</span> <span class="toc-text">配置项目 Kotlin 相关依赖</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%BA%90%E7%A0%81"><span class="toc-number">4.</span> <span class="toc-text">项目源码</span></a></li></ol>
             </div>
         
         <!-- sidebar -->
