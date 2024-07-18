@@ -359,7 +359,7 @@
                 <!-- 文章字数统计 -->
                 
                     <div class="post-intro-read">
-                        <span>字数统计: <span class="post-count word-count">6.4k</span>阅读时长: <span class="post-count reading-time">24 min</span></span>
+                        <span>字数统计: <span class="post-count word-count">6.8k</span>阅读时长: <span class="post-count reading-time">25 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -696,7 +696,21 @@
 <li><p>点击源代码区域右上角的运行图标，运行代码。若输出 <code>Hello world</code> 代表程序正常运行。（<del>实际直播中有键误，不用太在意。</del>）</p>
 <img src="/2024/07/17/ai-class-1/Screenshot_20240718_200004.png" class=""></li>
 </ol>
-<h3 id="GNU-Linux-平台上的-Python-环境搭建"><a href="#GNU-Linux-平台上的-Python-环境搭建" class="headerlink" title="GNU&#x2F;Linux 平台上的 Python 环境搭建"></a>GNU&#x2F;Linux 平台上的 Python 环境搭建</h3><p>TODO</p>
+<h3 id="GNU-Linux-平台上的-Python-环境搭建"><a href="#GNU-Linux-平台上的-Python-环境搭建" class="headerlink" title="GNU&#x2F;Linux 平台上的 Python 环境搭建"></a>GNU&#x2F;Linux 平台上的 Python 环境搭建</h3><p>笔者按：以下内容是笔者本人在 GNU&#x2F;Linux 平台上安装 Python 环境的相关经验，不保证对于所有发行版均适用，还请读者根据自己的发行版选择性参考，批判性接受。</p>
+<p>笔者使用的 Linux 发行版是 Arch Linux。根据 <a target="_blank" rel="noopener" href="https://wiki.archlinuxcn.org/wiki/Python">ArchWiki</a> 所述，使用 <code>yay</code> 从 AUR 中安装 <code>anaconda</code> 软件包。</p>
+<p>首先同步软件仓库，确保软件源信息是最新的：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yay -Sy</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">或</span></span><br><span class="line">sudo pacman -Sy</span><br></pre></td></tr></table></figure>
+
+<p>然后从 AUR 中安装 <code>anaconda</code> 软件包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S anaconda</span><br></pre></td></tr></table></figure>
+
+<p>完成后，注意到因为尚未对 <code>PATH</code> 环境变量进行配置，我们还不能直接执行命令 <code>conda</code>。但通过 AUR 进行安装的 Anaconda 其默认安装路径是 <code>/opt/anaconda</code>，我们可以使用绝对路径运行 Anaconda 以验证其是否安装成功。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/anaconda/bin/conda</span><br></pre></td></tr></table></figure>
+
+<p>成功输出帮助信息后，运行以下命令以自动为当前用户的 shell 配置 <code>PATH</code> 环境变量。由于笔者使用的 shell 是 <code>zsh</code> ，故运行如下，如有必要请修改其为适当的其他 shell：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/opt/anaconda/bin/conda init zsh</span><br></pre></td></tr></table></figure>
+
+<p>然后重新打开 shell。至此我们能够直接在终端中运行 <code>conda</code> 命令了。接下来配置 Anaconda 的步骤就和 Windows 平台上类似了，请回顾上一部分的有关内容，此处不加赘述。</p>
 <h2 id="3、Python基本语法"><a href="#3、Python基本语法" class="headerlink" title="3、Python基本语法"></a>3、Python基本语法</h2><h3 id="变量和数据类型"><a href="#变量和数据类型" class="headerlink" title="变量和数据类型"></a>变量和数据类型</h3><p>Python 支持多种数据类型，包括整数 <code>int</code>、浮点数 <code>float</code>、字符串 <code>str</code>、列表 <code>list</code>、字典 <code>dict</code> 等。</p>
 <h4 id="变量声明与基本类型"><a href="#变量声明与基本类型" class="headerlink" title="变量声明与基本类型"></a>变量声明与基本类型</h4><p>与 C&#x2F;C++ 不同，Python 中的变量无需在使用前先声明，随写随用。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="number">123</span> <span class="comment"># 整数 int 型变量</span></span><br><span class="line">b = <span class="number">123.4</span> <span class="comment"># 浮点 float 型变量</span></span><br></pre></td></tr></table></figure>
@@ -1016,6 +1030,11 @@
     <ul class="post-paginator">
         <li class="next">
             
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2024/07/18/ai-class-2/" title="“第二课堂”AI实践 随堂笔记（二）：Python环境配置及基础学习">
+                    <div class="nextTitle">“第二课堂”AI实践 随堂笔记（二）：Python环境配置及基础学习</div>
+                </a>
+            
         </li>
         <li class="previous">
             
@@ -1225,7 +1244,14 @@
         
         
         
+        
+        
+        
+        
+        
     
+        
+        
         
         
         
@@ -1244,7 +1270,7 @@
     
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 7
+        Total : 8
         </div>
         <!-- search  -->
         
@@ -1258,6 +1284,12 @@
             <div class="archive-year"> 2024 </div>
             <ul class="year-list">
             
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/18</span>
+            <a class="archive-post-title" href="/2024/07/18/ai-class-2/">“第二课堂”AI实践 随堂笔记（二）：Python环境配置及基础学习</a>
+        </li>
+    
         
         <li class="archive-post-item">
             <span class="archive-post-date">07/17</span>
