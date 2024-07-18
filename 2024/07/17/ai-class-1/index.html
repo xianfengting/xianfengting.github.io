@@ -26,6 +26,25 @@
 <meta property="og:site_name" content="src_resources&#39; Blog">
 <meta property="og:description" content="零、课程与笔记相关信息 本节课的课程回放（B站） 本笔记基于上述课程回放进行记录与补充完善，可能与实际直播略有出入。 本笔记部分内容摘自视频并手动码字，可能产生些许错别字及谐音字。  基于上述原因，请各位读者批评指正，向作者提出宝贵意见与建议，笔者感激不尽。 相关链接：  聪明办法学Python https:&#x2F;&#x2F;datawhalechina.github.io&#x2F;learn-python-the-s">
 <meta property="og:locale">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_172522.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_173119.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_173503.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_173514.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_194227.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_194305.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_194414.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_194510.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_194727.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_194845.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_194955.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_195055.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_195125.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_194955.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_195503.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_195606.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_195739.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_195752.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_200004.png">
 <meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_134838.png">
 <meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/jjcfb.png">
 <meta property="og:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_165730.png">
@@ -35,7 +54,7 @@
 <meta property="article:author" content="src_resources">
 <meta property="article:tag" content="“第二课堂”AI实践">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_134838.png">
+<meta name="twitter:image" content="https://blog.srcres.top/2024/07/17/ai-class-1/Screenshot_20240718_172522.png">
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <link rel="icon" href="/assets/favicon-avatar.ico">
@@ -604,41 +623,57 @@
 </ul>
 <h4 id="Miniconda-的安装"><a href="#Miniconda-的安装" class="headerlink" title="Miniconda 的安装"></a>Miniconda 的安装</h4><ol>
 <li><p>百度搜索“Miniconda THU”找到<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">清华大学的 Anaconda 镜像站</a>。跳转到其中的 <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/">Miniconda 分区</a>，选择合适的操作系统以及版本下载对应的文件（推荐下载 3-latest 版本，接下来以 <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-latest-Windows-x86_64.exe">Miniconda3-latest-Windows-x86_64.exe</a> 为例）。</p>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_172522.png" class="">
 </li>
 <li><p>运行刚才下载的 exe 软件包安装 Miniconda。</p>
 <p>注意要点：在 Advanced Installation Options 页面中，<strong>务必勾选</strong> Add Miniconda3 to my PATH environment variable，省去手动配置系统环境变量的步骤。</p>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_173119.png" class="">
 </li>
 <li><p>测试所安装的 Miniconda 能否正常运行。</p>
 <ul>
 <li>打开 Windows 资源管理器，在地址栏输入 <code>cmd</code> 并回车执行，打开命令提示符。</li>
 <li>在其中输入 <code>conda</code> 并回车执行，若输出一长串帮助信息，则证明安装成功。</li>
 </ul>
-</li>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_173503.png" class="">
+
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_173514.png" class=""></li>
 </ol>
 <h4 id="新建-Miniconda-虚拟环境"><a href="#新建-Miniconda-虚拟环境" class="headerlink" title="新建 Miniconda 虚拟环境"></a>新建 Miniconda 虚拟环境</h4><ol>
 <li><p>在刚才的命令提示符中执行 <code>conda create -n &lt;任意名字&gt; python-&lt;版本&gt;</code> 创建指定 Python 版本且指定名称的 Miniconda 虚拟环境。e.g. 执行 <code>conda create -n test python-3.10</code> 来创建 Python 版本为 3.10、名称为 test 的一个 Miniconda 虚拟环境。</p>
 <p>此过程中 Miniconda 需要联网下载用于构建虚拟环境的一些资源文件，请确保网络环境顺畅并耐心等待。</p>
 <p>若网络环境较差导致无法完成创建虚拟环境，可考虑换源解决：<a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">清华 Anaconda 镜像源</a>。因笔者未使用 Windows 配置 Miniconda 环境，恕不提供详细操作步骤，请自行查阅相关资料解决。</p>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_194227.png" class="">
+
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_194305.png" class="">
 </li>
 <li><p>执行 <code>conda activate test</code> 进入到刚才所创建的 Miniconda 虚拟环境。若命令提示符左侧出现 <code>(test)</code> 即证明成功进入到该虚拟环境。</p>
 <p>若要退出虚拟环境，执行 <code>conda deactivate</code>。若命令提示符左侧 <code>(test)</code> 消失即退出成功。</p>
-</li>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_194414.png" class="">
+
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_194510.png" class=""></li>
 </ol>
 <h4 id="Visual-Studio-Code-的安装"><a href="#Visual-Studio-Code-的安装" class="headerlink" title="Visual Studio Code 的安装"></a>Visual Studio Code 的安装</h4><p>Visual Studio Code （以下简称 VSCode）是一个轻量级的 IDE （<del>其实就是个功能更高级一点儿的编辑器罢了</del>）。作为示例，我们选择 VSCode。</p>
 <ol>
 <li><p>打开 VSCode 的<a target="_blank" rel="noopener" href="https://code.visualstudio.com/Download">下载页面</a>，下拉找到 Download Visual Studio Code，选择合适的操作系统并下载。</p>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_194727.png" class="">
 </li>
 <li><p>运行所下载的 exe 文件。由于该安装包界面是中文的，因此操作起来相对容易。不过还是有几点需要注意：</p>
 <ul>
-<li>在“选择附加任务”页面，勾选包含“将“通过 Code 打开””文字的两个复选框。这样以后若要使用 VSCode 打开某个文件或文件夹，直接对着其右键并在菜单中选择即可。同时也建议勾选“添加到 PATH”以方便未来直接在命令提示符中执行 VSCode 相关命令。</li>
+<li><p>在“选择附加任务”页面，勾选包含“将“通过 Code 打开””文字的两个复选框。这样以后若要使用 VSCode 打开某个文件或文件夹，直接对着其右键并在菜单中选择即可。同时也建议勾选“添加到 PATH”以方便未来直接在命令提示符中执行 VSCode 相关命令。</p>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_194845.png" class=""></li>
 </ul>
 </li>
 <li><p>安装完成后，VSCode 会自动启动。在 VSCode 界面中点击最左侧一栏中倒数第一个 Extensions 图标，安装一些必需的扩展。</p>
 <ul>
 <li><p>在搜索栏中搜索 <code>chinese</code>，安装中文（简体）语言包。安装完毕后右下角弹出重启提示，点击重启即可。再次打开后界面已经变成中文的了。</p>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_194955.png" class="">
+
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_195055.png" class="">
+
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_195125.png" class="">
 </li>
 <li><p>回到扩展搜索栏中，搜索 <code>python</code>，找到第一个扩展并安装。</p>
-</li>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_194955.png" class=""></li>
 </ul>
 </li>
 </ol>
@@ -646,14 +681,20 @@
 <li><p>在文件系统中的任意位置新建一个文件夹，作为 VSCode 的工作目录。作为演示，在桌面新建文件夹 <code>workspace</code>。</p>
 </li>
 <li><p>使用 VSCode 打开该文件夹。点击“是，我信任该作者”。在左侧右键选择“新建文件”创建一个 Python 源代码文件，起名为 <code>test1.py</code>。</p>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_195503.png" class="">
+
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_195606.png" class="">
 </li>
 <li><p>在刚才的文件中编写测试代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;Hello world&quot;</span>)</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>点击 VSCode 右下角的黄色感叹号区域，选择一个 Python 解释器。选择刚才新建的 Miniconda 虚拟环境 <code>test</code>（不要选择 <code>base</code>）。</p>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_195739.png" class="">
+
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_195752.png" class="">
 </li>
-<li><p>点击源代码区域右上角的运行图标，运行代码。若输出 <code>Hello world</code> 代表程序正常运行。</p>
-</li>
+<li><p>点击源代码区域右上角的运行图标，运行代码。若输出 <code>Hello world</code> 代表程序正常运行。（<del>实际直播中有键误，不用太在意。</del>）</p>
+<img src="/2024/07/17/ai-class-1/Screenshot_20240718_200004.png" class=""></li>
 </ol>
 <h3 id="GNU-Linux-平台上的-Python-环境搭建"><a href="#GNU-Linux-平台上的-Python-环境搭建" class="headerlink" title="GNU&#x2F;Linux 平台上的 Python 环境搭建"></a>GNU&#x2F;Linux 平台上的 Python 环境搭建</h3><p>TODO</p>
 <h2 id="3、Python基本语法"><a href="#3、Python基本语法" class="headerlink" title="3、Python基本语法"></a>3、Python基本语法</h2><h3 id="变量和数据类型"><a href="#变量和数据类型" class="headerlink" title="变量和数据类型"></a>变量和数据类型</h3><p>Python 支持多种数据类型，包括整数 <code>int</code>、浮点数 <code>float</code>、字符串 <code>str</code>、列表 <code>list</code>、字典 <code>dict</code> 等。</p>
