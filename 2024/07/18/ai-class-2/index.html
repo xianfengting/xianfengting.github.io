@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="default">
+    <!-- title -->
+
+
+    
+
+<!-- keywords -->
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="src_resources">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="src_resources">
+    
+        <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content="123">
+    <meta name="description" content="零、课程与笔记相关信息 本节课的课程回放（B站） 本笔记基于上述课程回放进行记录与补充完善，可能与实际直播略有出入。 本笔记部分内容摘自视频并手动码字，可能产生些许错别字及谐音字。  基于上述原因，请各位读者批评指正，向作者提出宝贵意见与建议，笔者感激不尽。 一、课程目标学习 Python 语言中 pandas 库的基本使用方法，并使用该库处理一些简单的数据集，达成所需的目的。 二、课堂内容1.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="“第二课堂”AI实践 随堂笔记（二）：Python环境配置及基础学习">
+<meta property="og:url" content="https://blog.srcres.top/2024/07/18/ai-class-2/index.html">
+<meta property="og:site_name" content="src_resources&#39; Blog">
+<meta property="og:description" content="零、课程与笔记相关信息 本节课的课程回放（B站） 本笔记基于上述课程回放进行记录与补充完善，可能与实际直播略有出入。 本笔记部分内容摘自视频并手动码字，可能产生些许错别字及谐音字。  基于上述原因，请各位读者批评指正，向作者提出宝贵意见与建议，笔者感激不尽。 一、课程目标学习 Python 语言中 pandas 库的基本使用方法，并使用该库处理一些简单的数据集，达成所需的目的。 二、课堂内容1.">
+<meta property="og:locale">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_164520.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_164654.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_170109.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_170502.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_170520.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_171001.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_172228.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_172739.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_173410.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_174639.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_174229.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_180119.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_180616.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_193452.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_193829.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_195622.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_200621.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_202743.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_203205.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_204153.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_212128.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_212703.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_212911.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_213232.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_213518.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_214137.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_214322.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_214652.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_214900.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_215544.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_220106.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_220222.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_220636.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_221042.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_223106.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240722_223329.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_194806.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_200239.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_200414.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_201012.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_201627.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_202431.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_203205.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_204001.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_204540.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_205034.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_205522.png">
+<meta property="og:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240723_210510.png">
+<meta property="article:published_time" content="2024-07-18T13:00:35.000Z">
+<meta property="article:modified_time" content="2024-07-18T13:00:35.000Z">
+<meta property="article:author" content="src_resources">
+<meta property="article:tag" content="“第二课堂”AI实践">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.srcres.top/2024/07/18/ai-class-2/Screenshot_20240719_164520.png">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="/assets/favicon-avatar.ico">
+    
+    <title>“第二课堂”AI实践 随堂笔记（二）：Python环境配置及基础学习 · src_resources&#39;s Blog</title>
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+    (function (w) {
+        'use strict'
+        // rel=preload support test
+        if (!w.loadCSS) {
+            w.loadCSS = function () {}
+        }
+        // define on the loadCSS obj
+        var rp = (loadCSS.relpreload = {})
+        // rel=preload feature support test
+        // runs once and returns a function for compat purposes
+        rp.support = (function () {
+            var ret
+            try {
+                ret = w.document.createElement('link').relList.supports('preload')
+            } catch (e) {
+                ret = false
+            }
+            return function () {
+                return ret
+            }
+        })()
+
+        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+        // then change that media back to its intended value on load
+        rp.bindMediaToggle = function (link) {
+            // remember existing media attr for ultimate state, or default to 'all'
+            var finalMedia = link.media || 'all'
+
+            function enableStylesheet() {
+                link.media = finalMedia
+            }
+
+            // bind load handlers to enable media
+            if (link.addEventListener) {
+                link.addEventListener('load', enableStylesheet)
+            } else if (link.attachEvent) {
+                link.attachEvent('onload', enableStylesheet)
+            }
+
+            // Set rel and non-applicable media type to start an async request
+            // note: timeout allows this to happen async to let rendering continue in IE
+            setTimeout(function () {
+                link.rel = 'stylesheet'
+                link.media = 'only x'
+            })
+            // also enable media after 3 seconds,
+            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+            setTimeout(enableStylesheet, 3000)
+        }
+
+        // loop through link elements in DOM
+        rp.poly = function () {
+            // double check this to prevent external calls from running
+            if (rp.support()) {
+                return
+            }
+            var links = w.document.getElementsByTagName('link')
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i]
+                // qualify links to those with rel=preload and as=style attrs
+                if (
+                    link.rel === 'preload' &&
+                    link.getAttribute('as') === 'style' &&
+                    !link.getAttribute('data-loadcss')
+                ) {
+                    // prevent rerunning on link
+                    link.setAttribute('data-loadcss', true)
+                    // bind listeners to toggle media back
+                    rp.bindMediaToggle(link)
+                }
+            }
+        }
+
+        // if unsupported, run the polyfill
+        if (!rp.support()) {
+            // run once at least
+            rp.poly()
+
+            // rerun poly on an interval until onload
+            var run = w.setInterval(rp.poly, 500)
+            if (w.addEventListener) {
+                w.addEventListener('load', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            }
+        }
+
+        // commonjs
+        if (typeof exports !== 'undefined') {
+            exports.loadCSS = loadCSS
+        } else {
+            w.loadCSS = loadCSS
+        }
+    })(typeof global !== 'undefined' ? global : this)
+</script>
+
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20211217" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=20211217" as="style">
+    <link rel="stylesheet" href="/css/dark.css">
+    <link rel="stylesheet" href="/css/mobile.css?v=20211217" media="(max-width: 960px)">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js?v=20211217" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=20211217" as="script">
+    <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
+    <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <!-- algolia -->
+    
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="src_resources' Blog" type="application/atom+xml">
+</head>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ == undefined) {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js" />')
+        }
+    </script>
+    
+        <body class="post-body">
+    
+        <!-- header -->
+        <header class="header header-mobile">
+    <!-- top read progress line -->
+    <div class="header-element">
+        <div class="read-progress"></div>
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+            <div class="header-sidebar-menu">
+        
+            
+                <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- header actions -->
+    <div class="header-actions">
+        <!-- theme mode switch button -->
+        <span class="header-theme-btn header-element">
+            <i class="fas fa-adjust"></i>
+        </span>
+        <!-- back to home page text -->
+        <span class="home-link header-element">
+            <a href=/>src_resources's Blog</a>
+        </span>
+    </div>
+    <!-- toggle banner for post layout -->
+    
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">src_resources&#39;s Blog</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">“第二课堂”AI实践 随堂笔记（二）：Python环境配置及基础学习</a>
+            </div>
+        </div>
+    
+</header>
+
+        <!-- fixed footer -->
+        <footer class="footer-fixed">
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+            <div class="back-top back-top-hidden">
+        
+        
+            <div>&#xe639;</div>
+        
+        </div>
+    </div>
+</footer>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="site-intro" style="
+
+
+
+
+
+
+
+    height:50vh;
+
+">
+    
+    <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
+    
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/assets/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+                “第二课堂”AI实践 随堂笔记（二）：Python环境配置及基础学习
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+                
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="“第二课堂”AI实践">“第二课堂”AI实践</a>
+    
+</div>
+
+                
+                <!-- 文章字数统计 -->
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">6.4k</span>阅读时长: <span class="post-count reading-time">25 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2024/07/18</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+            <script>
+  // get user agent
+  function getBrowserVersions() {
+    var u = window.navigator.userAgent
+    return {
+      userAgent: u,
+      trident: u.indexOf('Trident') > -1, //IE内核
+      presto: u.indexOf('Presto') > -1, //opera内核
+      webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+      gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+      mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+      android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+      iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+      iPad: u.indexOf('iPad') > -1, //是否为iPad
+      webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+      weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+      uc: u.indexOf('UCBrowser') > -1, //是否为android下的UC浏览器
+    }
+  }
+  var browser = {
+    versions: getBrowserVersions(),
+  }
+  console.log('userAgent: ' + browser.versions.userAgent)
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded')
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document
+        .getElementsByClassName('intro-title')[0]
+        .classList.add('intro-fade-in')
+      document
+        .getElementsByClassName('intro-subtitle')[0]
+        .classList.add('intro-fade-in')
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in')
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb() {
+    if (browser.versions.uc) {
+      console.log('UCBrowser')
+      fontLoaded()
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular'],
+        },
+        loading: function () {
+          // 所有字体开始加载
+          // console.log('font loading');
+        },
+        active: function () {
+          // 所有字体已渲染
+          fontLoaded()
+        },
+        inactive: function () {
+          // 字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout')
+          fontLoaded()
+        },
+        timeout: 5000, // Set the timeout to two seconds
+      })
+    }
+  }
+
+  function asyncErr() {
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0]
+    o.src = u
+    if (cb) {
+      o.addEventListener(
+        'load',
+        function (e) {
+          cb(null, e)
+        },
+        false
+      )
+    }
+    if (err) {
+      o.addEventListener(
+        'error',
+        function (e) {
+          err(null, e)
+        },
+        false
+      )
+    }
+    s.parentNode.insertBefore(o, s)
+  }
+
+  var asyncLoadWithFallBack = function (arr, success, reject) {
+    var currReject = function () {
+      reject()
+      arr.shift()
+      if (arr.length) async(arr[0], success, currReject)
+    }
+
+    async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack(
+    [
+      'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js',
+      'https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js',
+      "/lib/webfontloader.min.js",
+    ],
+    asyncCb,
+    asyncErr
+  )
+</script>
+
+            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+            <div class="container container-unloaded">
+                <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="零、课程与笔记相关信息"><a href="#零、课程与笔记相关信息" class="headerlink" title="零、课程与笔记相关信息"></a>零、课程与笔记相关信息</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1WKbXeDEth/">本节课的课程回放（B站）</a></li>
+<li>本笔记基于上述课程回放进行记录与补充完善，可能与实际直播略有出入。</li>
+<li>本笔记部分内容摘自视频并手动码字，可能产生些许错别字及谐音字。</li>
+</ul>
+<p>基于上述原因，请各位读者批评指正，向作者提出宝贵意见与建议，笔者感激不尽。</p>
+<h1 id="一、课程目标"><a href="#一、课程目标" class="headerlink" title="一、课程目标"></a>一、课程目标</h1><p>学习 Python 语言中 <code>pandas</code> 库的基本使用方法，并使用该库处理一些简单的数据集，达成所需的目的。</p>
+<h1 id="二、课堂内容"><a href="#二、课堂内容" class="headerlink" title="二、课堂内容"></a>二、课堂内容</h1><h2 id="1-课程前言"><a href="#1-课程前言" class="headerlink" title="1. 课程前言"></a>1. 课程前言</h2><p>这门课程得主要目的是通过真实的数据，以实战的方式了解数据分析的流程和熟悉数据分析 Python 的基本操作。知道了课程的目的之后，我们接下来我们要正式的开始数据分析的实战教学，完成 Kaggle 上泰坦尼克的任务，实战数据分析全流程。</p>
+<h2 id="2-常用-Python-库的引入方式"><a href="#2-常用-Python-库的引入方式" class="headerlink" title="2. 常用 Python 库的引入方式"></a>2. 常用 Python 库的引入方式</h2><p>Python 中的库（模块）通过 <code>import</code> 语句进行引入。特别地，对于 NumPy 与 Pandas 二库，习惯分别指定别名 <code>np</code> 与 <code>pd</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-使用-Pandas-从文件中加载数据"><a href="#3-使用-Pandas-从文件中加载数据" class="headerlink" title="3. 使用 Pandas 从文件中加载数据"></a>3. 使用 Pandas 从文件中加载数据</h2><h3 id="普通读取"><a href="#普通读取" class="headerlink" title="普通读取"></a>普通读取</h3><p><code>pandas</code> 库提供了 <code>read_csv</code> 方法以从给定的 CSV 文件中加载数据。其中文件名既可以相对路径，又可以绝对路径的形式给出。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以相对路径的方式指定文件名并载入数据</span></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;train.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 以绝对路径的方式指定文件名并载入数据</span></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;/home/srcres/Coding/Projects/pandas-learn/pandas_rumen/train.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="逐块读取"><a href="#逐块读取" class="headerlink" title="逐块读取"></a>逐块读取</h3><p>通过指定 <code>read_csv</code> 方法的 <code>chunksize</code> 参数，可实现一次读取一定条目的逐块读取方式加载数据。例如，实现一次读取 1000 条数据的逐块加载：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">reader = pd.read_csv(<span class="string">&#x27;train.csv&#x27;</span>, chunksize=<span class="number">1000</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i, chunk <span class="keyword">in</span> <span class="built_in">enumerate</span>(reader):</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;----- Chunk <span class="subst">&#123;i&#125;</span> -----&quot;</span>)</span><br><span class="line">    <span class="built_in">print</span>(chunk)</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-更改数据集表头名称（更改列名）"><a href="#4-更改数据集表头名称（更改列名）" class="headerlink" title="4. 更改数据集表头名称（更改列名）"></a>4. 更改数据集表头名称（更改列名）</h2><h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h3><p>现将样例数据集中的各英文列名翻译为中文，需要使用 Pandas 提供的列名重命名功能。翻译如下表所示：</p>
+<table>
+<thead>
+<tr>
+<th align="center">英文</th>
+<th align="center">中文</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">PassengerId</td>
+<td align="center">乘客ID</td>
+</tr>
+<tr>
+<td align="center">Survived</td>
+<td align="center">是否幸存</td>
+</tr>
+<tr>
+<td align="center">Pclass</td>
+<td align="center">乘客等级(1&#x2F;2&#x2F;3等舱位)</td>
+</tr>
+<tr>
+<td align="center">Name</td>
+<td align="center">乘客姓名</td>
+</tr>
+<tr>
+<td align="center">Sex</td>
+<td align="center">性别</td>
+</tr>
+<tr>
+<td align="center">Age</td>
+<td align="center">年龄</td>
+</tr>
+<tr>
+<td align="center">SibSp</td>
+<td align="center">堂兄弟&#x2F;妹个数</td>
+</tr>
+<tr>
+<td align="center">Parch</td>
+<td align="center">父母与小孩个数</td>
+</tr>
+<tr>
+<td align="center">Ticket</td>
+<td align="center">船票信息</td>
+</tr>
+<tr>
+<td align="center">Fare</td>
+<td align="center">票价</td>
+</tr>
+<tr>
+<td align="center">Cabin</td>
+<td align="center">客舱</td>
+</tr>
+<tr>
+<td align="center">Embarked</td>
+<td align="center">登船港口</td>
+</tr>
+</tbody></table>
+<h3 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h3><p>方式一（课程给出的方式），通过指定 <code>read_csv</code> 函数的 <code>names</code> 参数，实现在加载数据集的同时就完成列名重命名操作。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&#x27;train.csv&#x27;</span>, names=[<span class="string">&#x27;乘客ID&#x27;</span>, <span class="string">&#x27;是否幸存&#x27;</span>, <span class="string">&#x27;乘客等级(1/2/3等舱位)&#x27;</span>, <span class="string">&#x27;乘客姓名&#x27;</span>, <span class="string">&#x27;性别&#x27;</span>, <span class="string">&#x27;年龄&#x27;</span>, <span class="string">&#x27;堂兄弟/妹个数&#x27;</span>, <span class="string">&#x27;父母与小孩个数&#x27;</span>, <span class="string">&#x27;船票信息&#x27;</span>, <span class="string">&#x27;票价&#x27;</span>, <span class="string">&#x27;客舱&#x27;</span>, <span class="string">&#x27;登船港口&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<p><code>read_csv</code> 有丰富的功能各异的参数，使用得当能在加载数据时完成许多预处理操作。例如，在此基础之上再指定索引 <code>index</code> 列为 <code>&#39;乘客ID&#39;</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&#x27;train.csv&#x27;</span>, names=[<span class="string">&#x27;乘客ID&#x27;</span>, <span class="string">&#x27;是否幸存&#x27;</span>, <span class="string">&#x27;乘客等级(1/2/3等舱位)&#x27;</span>, <span class="string">&#x27;乘客姓名&#x27;</span>, <span class="string">&#x27;性别&#x27;</span>, <span class="string">&#x27;年龄&#x27;</span>, <span class="string">&#x27;堂兄弟/妹个数&#x27;</span>, <span class="string">&#x27;父母与小孩个数&#x27;</span>, <span class="string">&#x27;船票信息&#x27;</span>, <span class="string">&#x27;票价&#x27;</span>, <span class="string">&#x27;客舱&#x27;</span>, <span class="string">&#x27;登船港口&#x27;</span>], index_col=<span class="string">&#x27;乘客ID&#x27;</span>, header=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_164520.png" class="">
+
+<h3 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h3><p>方式二（笔者给出的方式），使用 <code>read_csv</code> 正常再入数据集，之后调用 Pandas 提供的其他功能函数进行数据集的后续处理。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&#x27;train.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>载入后，先使用 <code>rename</code> 函数完成列名更名：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">df = df.rename(columns=&#123;</span><br><span class="line">    <span class="string">&#x27;PassengerId&#x27;</span>: <span class="string">&#x27;乘客ID&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Survived&#x27;</span>: <span class="string">&#x27;是否幸存&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Pclass&#x27;</span>: <span class="string">&#x27;乘客等级(1/2/3等舱位)&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;乘客姓名&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sex&#x27;</span>: <span class="string">&#x27;性别&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Age&#x27;</span>: <span class="string">&#x27;年龄&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;SibSp&#x27;</span>: <span class="string">&#x27;堂兄弟/妹个数&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Parch&#x27;</span>: <span class="string">&#x27;父母与小孩个数&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Ticket&#x27;</span>: <span class="string">&#x27;船票信息&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Fare&#x27;</span>: <span class="string">&#x27;票价&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Cabin&#x27;</span>: <span class="string">&#x27;客舱&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Embarked&#x27;</span>: <span class="string">&#x27;登船港口&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>接着再使用 <code>set_index</code> 函数设置数据集的索引列：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df = df.set_index(<span class="string">&#x27;乘客ID&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>最终得到与方式一相同的结果：</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_164654.png" class="">
+
+<h2 id="5-数据集的初步观察"><a href="#5-数据集的初步观察" class="headerlink" title="5. 数据集的初步观察"></a>5. 数据集的初步观察</h2><h3 id="显示数据集的摘要"><a href="#显示数据集的摘要" class="headerlink" title="显示数据集的摘要"></a>显示数据集的摘要</h3><p>使用 <code>info</code> 函数获取数据集每一列数据的摘要。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.info()</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_170109.png" class="">
+
+<h3 id="显示数据集的首末行信息"><a href="#显示数据集的首末行信息" class="headerlink" title="显示数据集的首末行信息"></a>显示数据集的首末行信息</h3><p>使用 <code>head</code> 或 <code>tail</code> 以获取数据集的前任意行或末尾任意行的数据信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示 df 的前 10 行信息</span></span><br><span class="line">df.head(<span class="number">10</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_170502.png" class="">
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 显示 df 的后 15 行信息</span></span><br><span class="line">df.tail(<span class="number">15</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_170520.png" class="">
+
+<h3 id="数据集空值的判断"><a href="#数据集空值的判断" class="headerlink" title="数据集空值的判断"></a>数据集空值的判断</h3><p>使用 <code>isnull</code> 函数判断数据集各部分是否存在空值，并一一映射为全是 <code>bool</code> 类型数据的 <code>DataFrame</code>。</p>
+<p>例如，显示数据集 <code>df</code> 中前5行数据的空值分布情况。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.isnull().head(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_171001.png" class="">
+
+<h2 id="6-数据集的保存"><a href="#6-数据集的保存" class="headerlink" title="6. 数据集的保存"></a>6. 数据集的保存</h2><p>对数据集 <code>DataFrame</code> 调用 <code>to_csv</code> 函数以将数据集保存为指定名称的 CSV 文件。</p>
+<p>注意文本文件的文本编码问题。由于不同操作系统的默认文本编码不同（Windows 上默认为 <code>GBK</code>，GNU&#x2F;Linux 上默认为 <code>UTF-8</code>），如所保存的文件出现乱码现象，就需要通过 <code>to_csv</code> 函数的 <code>encoding</code> 参数手动指定文件编码。</p>
+<p>例如，将 <code>df</code> 保存到 <code>train_chinese.csv</code> 文件中，并指定文本编码为 <code>utf-8</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.to_csv(<span class="string">&#x27;train_chinese.csv&#x27;</span>, encoding=<span class="string">&#x27;utf-8&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="7-获取数据集的所有列"><a href="#7-获取数据集的所有列" class="headerlink" title="7. 获取数据集的所有列"></a>7. 获取数据集的所有列</h2><p>通过数据集 <code>DataFrame</code> 的 <code>columns</code> 属性，可以轻松地获取其所有列的名称。例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;\n&#x27;</span>.join(<span class="built_in">list</span>(df.columns)))</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_172228.png" class="">
+
+<h2 id="8-数据集的列操作"><a href="#8-数据集的列操作" class="headerlink" title="8. 数据集的列操作"></a>8. 数据集的列操作</h2><h3 id="理论储备"><a href="#理论储备" class="headerlink" title="理论储备"></a>理论储备</h3><p>要获取数据集某一列的所有值，可使用下标索引语法，给定需要进行获取的列名即可。得到的结果是 <code>Series</code> 类型的。</p>
+<p>例如，查询 <code>df</code> 中 <code>&#39;Cabin&#39;</code> 一列中的所有值：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;Cabin&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_172739.png" class="">
+
+<p>或者，也可通过点语法获取。Pandas 已将各列数据包装成为 <code>DataFrame</code> 的属性，只需访问列名对应的属性即可：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.Cabin</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_173410.png" class="">
+
+<blockquote>
+<p><strong>小记</strong></p>
+<p>亦可使用 <code>DataFrame</code> 的 <code>loc</code> 属性，通过筛选出对应列的数据，实现列数据的获取。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.loc[:, <span class="string">&#x27;Cabin&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_174639.png" class="">
+</blockquote>
+<h3 id="实战演练"><a href="#实战演练" class="headerlink" title="实战演练"></a>实战演练</h3><h4 id="需求-1"><a href="#需求-1" class="headerlink" title="需求"></a>需求</h4><p>加载文件 <code>test_1.csv</code>，然后对比 <code>train.csv</code>，看看有哪些多出的列，然后将多出的列删除。</p>
+<h4 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h4><p>先将上述两个数据集进行加载：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># train.csv 即为前文数据集对象 df，省略其加载步骤。</span></span><br><span class="line">df_test_1 = pd.read_csv(<span class="string">&#x27;test_1.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>接下来通过简单的算法，筛选出题目所要求的多余的列：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">df_cols = <span class="built_in">list</span>(df.columns)</span><br><span class="line">dup_cols = [] <span class="comment"># 多余的列</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">list</span>(df_test_1.columns):</span><br><span class="line">    <span class="keyword">if</span> col <span class="keyword">not</span> <span class="keyword">in</span> df_cols:</span><br><span class="line">        dup_cols.append(col)</span><br></pre></td></tr></table></figure>
+
+<p>最后使用 <code>drop</code> 函数将 <code>df_test_1</code> 中的多余列删除。务必注意指定 <code>axis</code> 参数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_test_1 = df_test_1.drop(dup_cols, axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_174229.png" class="">
+
+<blockquote>
+<p><strong>小记</strong></p>
+<p>亦可通过 Python 的 <code>del</code> 关键字对 <code>DataFrame</code> 的列进行删除。如上述代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_test_1 = df_test_1.drop(dup_cols, axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>可修改为等价代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> dup_cols:</span><br><span class="line">    <span class="keyword">del</span> df_test_1[col]</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h2 id="9-数据集的隐藏"><a href="#9-数据集的隐藏" class="headerlink" title="9. 数据集的隐藏"></a>9. 数据集的隐藏</h2><p><code>DataFrame</code> 中有个 <code>style</code> 属性，该属性控制 <code>DataFrame</code> 在笔记本或终端中被展示出来时的样式。通过调用 <code>style</code> 属性的 <code>hide</code> 方法，能将 <code>DataFrame</code> 中特定的部分隐藏起来，从而不会在笔记本或终端中被展示出来。</p>
+<p>例如，将 <code>df_test_1</code> 中 <code>&#39;PassengerId&#39;</code>、<code>&#39;Name&#39;</code>、<code>&#39;Age&#39;</code>、<code>&#39;Ticket&#39;</code> 这些列隐藏起来：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df_test_1.style.hide([<span class="string">&#x27;PassengerId&#x27;</span>, <span class="string">&#x27;Name&#x27;</span>, <span class="string">&#x27;Age&#x27;</span>, <span class="string">&#x27;Ticket&#x27;</span>], axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：（<del>此处我的 IDE 抽风，不显示结果，应该是 IDE 的 bug &#x3D; &#x3D;，被迫切换网页版的 Jupyter Notebook。</del>）</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_180119.png" class="">
+
+<blockquote>
+<p><strong>注意</strong></p>
+<p>此处知识点，课程所介绍的隐藏数据方式有误。<code>drop</code> 函数与 <code>del</code> 关键字相同，均是删除 <code>DataFrame</code> 中的数据，而<strong>非</strong>隐藏数据。要隐藏数据不被展示出来，而不破坏原有的数据结构，只能通过操作 <code>style</code> 属性来实现，如上所述。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_180616.png" class="">
+</blockquote>
+<h2 id="10-数据集的筛选"><a href="#10-数据集的筛选" class="headerlink" title="10. 数据集的筛选"></a>10. 数据集的筛选</h2><p>Pandas 支持多种方式从数据集中筛选符合给定指定的数据。</p>
+<h3 id="题目一"><a href="#题目一" class="headerlink" title="题目一"></a>题目一</h3><p>题目一：从数据集 <code>df</code> 中筛选出 <code>&#39;Age&#39;</code> 在10岁以下的乘客信息。</p>
+<p>在 Pandas 中，我们可以使用 <code>DataFrame</code> 的 <code>loc</code> 属性来实现，并传入我们的查询条件：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df.loc[df[<span class="string">&#x27;Age&#x27;</span>] &lt; <span class="number">10</span>, :]</span><br></pre></td></tr></table></figure>
+
+<p>观察所得数据，其 <code>&#39;Age&#39;</code> 值均小于10，符合我们的预期。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_193452.png" class="">
+
+<blockquote>
+<p><strong>小记</strong></p>
+<p>亦可不使用 <code>loc</code> 属性，直接使用查询条件作为索引，效果等价。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[df[<span class="string">&#x27;Age&#x27;</span>] &lt; <span class="number">10</span>]</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_193829.png" class="">
+</blockquote>
+<h3 id="题目二"><a href="#题目二" class="headerlink" title="题目二"></a>题目二</h3><p>题目二：以 <code>&#39;Age&#39;</code> 为条件，将年龄在10岁以上和50岁以下的乘客信息显示出来，并将这个数据命名为 <code>midage</code>。</p>
+<p>在 Pandas 中，筛选条件之间的二元运算使用 <code>&amp;</code> 和 <code>|</code> 运算符，其中 <code>&amp;</code> 表示“并且”，<code>|</code> 表示“或者”。</p>
+<p>例如，要实现题设所给的筛选条件，先分别写出表示“10岁以上”和“50岁以下”的条件，再将其用 <code>&amp;</code> 连接。注意连接前每个参与运算的条件需用括号括起来，否则会因为默认的运算符优先级而导致代码逻辑背离我们的期望。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注意将查询结果存入变量 midage 中</span></span><br><span class="line">midage = df.loc[(df[<span class="string">&#x27;Age&#x27;</span>] &gt;= <span class="number">10</span>) &amp; (df[<span class="string">&#x27;Age&#x27;</span>] &lt; <span class="number">50</span>), :]</span><br></pre></td></tr></table></figure>
+
+<p>所得结果，数据的 <code>&#39;Age&#39;</code> 值的分布范围符合我们的预期。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_195622.png" class="">
+
+<blockquote>
+<p><strong>小记</strong><br>同样地，若不使用 <code>loc</code>，也能如下达到相同的效果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">midage = df[(df[<span class="string">&#x27;Age&#x27;</span>] &gt;= <span class="number">10</span>) &amp; (df[<span class="string">&#x27;Age&#x27;</span>] &lt; <span class="number">50</span>)]</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h3 id="题目三"><a href="#题目三" class="headerlink" title="题目三"></a>题目三</h3><p>题目三：将 <code>midage</code> 的数据中第100行的 <code>&#39;Pclass&#39;</code> 和 <code>&#39;Sex&#39;</code> 的数据显示出来。</p>
+<p>此处就必须用到前文中常提到的 <code>loc</code> 属性了。对 <code>loc</code> 属性同时在行与列上进行索引，以获取到题目所要求的各项数据。其中索引需要提供两个参数，第一个为行，第二个为列。若要查询多行或多列，将对应位置改为列表即可。</p>
+<p><strong>尤其注意</strong>的是，本题要求获取到 <code>midage</code> 中第100行的数据。因此在查询操作前，务必确保该数据集的索引是默认索引，先调用 <code>reset_index</code> 将其重置为默认索引。否则可能会因为索引未重置导致查询到其他行的数据，或者无法查询到数据。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询前先重置索引</span></span><br><span class="line">midage = midage.reset_index()</span><br><span class="line"><span class="comment"># 查询第100行数据，因索引值从0开始计算，故指定索引为99</span></span><br><span class="line">midage.loc[<span class="number">99</span>, [<span class="string">&#x27;Pclass&#x27;</span>, <span class="string">&#x27;Sex&#x27;</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>所得结果是 <code>Series</code> 类型的。这是显然的；因为我们仅查询了一行数据。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_200621.png" class="">
+
+<h3 id="题目四"><a href="#题目四" class="headerlink" title="题目四"></a>题目四</h3><p>题目四：使用 <code>loc</code> 方法将 <code>midage</code> 的数据中第100，105，108行的 <code>Pclass</code>，<code>Name</code> 和 <code>Sex</code> 的数据显示出来。</p>
+<p>与上一题类似，但此时对 <code>loc</code> 的索引要同时指定多行和多列。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">midage.loc[[<span class="number">99</span>, <span class="number">104</span>, <span class="number">107</span>], [<span class="string">&#x27;Pclass&#x27;</span>, <span class="string">&#x27;Name&#x27;</span>, <span class="string">&#x27;Sex&#x27;</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>此时所得到的结果就是 <code>DataFrame</code> 类型的了，因为我们同时查询了多行与多列的数据。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_202743.png" class="">
+
+<h3 id="题目五"><a href="#题目五" class="headerlink" title="题目五"></a>题目五</h3><p>题目五：使用 <code>iloc</code> 方法将 <code>midage</code> 的数据中第100，105，108行的 <code>Pclass</code>，<code>Name</code> 和 <code>Sex</code> 的数据显示出来。</p>
+<p><code>iloc</code> 与 <code>loc</code> 非常类似，只是其中对列的索引由列名的方式改为了整数下标的方式。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">midage.iloc[[<span class="number">99</span>, <span class="number">104</span>, <span class="number">107</span>], [<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]]</span><br></pre></td></tr></table></figure>
+
+<p>结果与上一题一致。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_203205.png" class="">
+
+<h2 id="11-数据集的分析"><a href="#11-数据集的分析" class="headerlink" title="11. 数据集的分析"></a>11. 数据集的分析</h2><p>在前面我们已经学习了 Pandas 基础，知道利用 Pandas 读取 csv 数据的增删查改，今天我们要学习的就是<strong>探索性数据分析</strong>，主要介绍如何利用 Pandas 进行排序、算术计算以及计算描述函数 <code>describe()</code> 的使用。</p>
+<h3 id="对数据进行排序"><a href="#对数据进行排序" class="headerlink" title="对数据进行排序"></a>对数据进行排序</h3><h4 id="理论储备-1"><a href="#理论储备-1" class="headerlink" title="理论储备"></a>理论储备</h4><p>给定下列样例数据集：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">frame = pd.DataFrame(np.arange(<span class="number">8</span>).reshape((<span class="number">2</span>, <span class="number">4</span>)), </span><br><span class="line">                     index=[<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;1&#x27;</span>], </span><br><span class="line">                     columns=[<span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240719_204153.png" class="">
+
+<p><strong>操作一：</strong>将该数据集按任意列升序排列。</p>
+<p>在 Pandas 中，排列数据集的方式是调用该数据集的 <code>sort_values</code> 方法。该方法需要指定两个参数，<code>by</code> 参数用以指明排序时所参考的行或列， <code>ascending</code> 标明是否升序排序，<code>True</code> 为升序排序，<code>False</code> 为降序排序；默认值为 <code>True</code>，即升序排序。</p>
+<p>选取列 <code>&#39;d&#39;</code> 作为示例，按该列进行升序排序。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">frame.sort_values(<span class="string">&#x27;d&#x27;</span>, ascending=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>因 <code>by</code> 为 <code>sort_values</code> 方法的第一个参数，故可省略其参数名。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_212128.png" class="">
+
+<p><strong>操作二：</strong>将该数据集让行索引升序排序。</p>
+<p>按行排序的操作与按列排序时类似，将 <code>axis</code> 参数指定为 <code>1</code>，<code>by</code> 参数由参照列改为参照行即可。注意此处的行指该数据集的 <code>index</code> 属性中的元素。</p>
+<p>例如，按行 <code>&#39;2&#39;</code> 升序排序。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">frame.sort_values(<span class="string">&#x27;2&#x27;</span>, ascending=<span class="literal">True</span>, axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_212703.png" class="">
+
+<p><strong>操作三：</strong>将该数据集让行索引降序排序。</p>
+<p>参照上面的例子稍作修改即可，将 <code>ascending</code> 参数修改为 <code>False</code>。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">frame.sort_values(<span class="string">&#x27;2&#x27;</span>, ascending=<span class="literal">False</span>, axis=<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_212911.png" class="">
+
+<p><strong>操作四：</strong>将该数据集让任选两列数据同时降序排序。</p>
+<p>以 <code>&#39;d&#39;</code> 列为例。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">frame.sort_values(<span class="string">&#x27;d&#x27;</span>, ascending=<span class="literal">False</span>, axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_213232.png" class="">
+
+<p><strong>操作五：</strong>将该数据集让任选两列数据同时降序排序。</p>
+<p><code>sort_values</code> 方法也是支持同时指定多行或多列作为排序时的参考的，只需将 <code>by</code> 参数中的列修改为由多个列组成的 <code>list</code> 即可。</p>
+<p>例如，同时指定 <code>&#39;a&#39;</code> <code>&#39;b&#39;</code> 两列作为排序参考，进行降序排序。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">frame.sort_values([<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>], ascending=<span class="literal">False</span>, axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_213518.png" class="">
+
+<h4 id="实战演练-1"><a href="#实战演练-1" class="headerlink" title="实战演练"></a>实战演练</h4><h5 id="需求-2"><a href="#需求-2" class="headerlink" title="需求"></a>需求</h5><p>对泰坦尼克号数据（<code>train.csv</code>）按票价和年龄两列进行综合排序（降序排列），从数据中你能发现什么。</p>
+<h5 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h5><p>分析需求知，我们需要对 <code>train.csv</code> 数据集进行：</p>
+<ol>
+<li>对列降序排序；</li>
+<li>参考列为 <code>&#39;票价&#39;</code> 和 <code>&#39;年龄&#39;</code>。</li>
+</ol>
+<p>再套用前文所述前置知识即可。</p>
+<h5 id="实现-1"><a href="#实现-1" class="headerlink" title="实现"></a>实现</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 此处使用了 head(20) 方法精简输出，便于观察结果</span></span><br><span class="line">df.sort_values([<span class="string">&#x27;票价&#x27;</span>, <span class="string">&#x27;年龄&#x27;</span>], ascending=<span class="literal">False</span>, axis=<span class="number">0</span>).head(<span class="number">20</span>)</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_214137.png" class="">
+
+<p>观察结果，数据集中年龄和票价随着数据行号的增加而递减，符合预期。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_214322.png" class="">
+
+<h3 id="数据集的二元运算"><a href="#数据集的二元运算" class="headerlink" title="数据集的二元运算"></a>数据集的二元运算</h3><p>Pandas 中的 <code>DataFrame</code> 是支持数据集之间的二元运算的。下面以 <code>+</code> 运算为例。</p>
+<p>给定如下两份样例数据：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">frame1_a = pd.DataFrame(np.arange(<span class="number">9.</span>).reshape(<span class="number">3</span>, <span class="number">3</span>),</span><br><span class="line">                     columns=[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>],</span><br><span class="line">                     index=[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;three&#x27;</span>])</span><br><span class="line">frame1_b = pd.DataFrame(np.arange(<span class="number">12.</span>).reshape(<span class="number">4</span>, <span class="number">3</span>),</span><br><span class="line">                     columns=[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;c&#x27;</span>],</span><br><span class="line">                     index=[<span class="string">&#x27;first&#x27;</span>, <span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>, <span class="string">&#x27;second&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_214652.png" class="">
+
+<p>现将 <code>frame1_a</code> 与 <code>frame1_b</code> 相加：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">frame1_a + frame1_b</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_214900.png" class="">
+
+<p>可以看到，两个 <code>DataFrame</code> 相加后，会返回一个新的 <code>DataFrame</code> ，对应的行和列的值会相加，没有对应的会变成空值 <code>NaN</code>。</p>
+<p>当然，<code>DataFrame</code> 还有很多算术运算，如减法，除法。此处从略。</p>
+<h3 id="对数据集进行统计"><a href="#对数据集进行统计" class="headerlink" title="对数据集进行统计"></a>对数据集进行统计</h3><p>接下来对上述 <code>train.csv</code> 数据集进一步分析。我们希望通过泰坦尼克号数据，计算出在船上最大的家族有多少人。其中对于家族人数的定义为：家族人数&#x3D;兄弟姐妹个数+父母子女个数。</p>
+<p>结合前面已学的知识，可以运用 <code>DataFrame</code> 的 <code>apply</code> 方法简单地达成目的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">count_sum = df.apply(<span class="keyword">lambda</span> it: it[<span class="string">&#x27;堂兄弟/妹个数&#x27;</span>] + it[<span class="string">&#x27;父母与小孩个数&#x27;</span>], axis=<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(count_sum.<span class="built_in">max</span>())</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_215544.png" class="">
+
+<h3 id="查看数据集的基本统计信息"><a href="#查看数据集的基本统计信息" class="headerlink" title="查看数据集的基本统计信息"></a>查看数据集的基本统计信息</h3><h4 id="理论储备-2"><a href="#理论储备-2" class="headerlink" title="理论储备"></a>理论储备</h4><p>Pandas 的 <code>DataFrame</code> 提供了一个 <code>describe</code> 函数，方便我们查看数据基本统计信息。</p>
+<p>例如，对于以下样例数据集：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">frame2 = pd.DataFrame([[<span class="number">1.4</span>, np.nan], </span><br><span class="line">                       [<span class="number">7.1</span>, -<span class="number">4.5</span>],</span><br><span class="line">                       [np.nan, np.nan], </span><br><span class="line">                       [<span class="number">0.75</span>, -<span class="number">1.3</span>]</span><br><span class="line">                      ], index=[<span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>], columns=[<span class="string">&#x27;one&#x27;</span>, <span class="string">&#x27;two&#x27;</span>])</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_220106.png" class="">
+
+<p>使用 <code>describe</code> 方法查看其基本统计信息：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">frame2.describe()</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_220222.png" class="">
+
+<h4 id="实战演练-2"><a href="#实战演练-2" class="headerlink" title="实战演练"></a>实战演练</h4><h5 id="需求-3"><a href="#需求-3" class="headerlink" title="需求"></a>需求</h5><p>查看 <code>train.csv</code> 数据集中 票价、父母子女 这列数据的基本统计数据，你能发现什么。</p>
+<h5 id="分析-1"><a href="#分析-1" class="headerlink" title="分析"></a>分析</h5><p>根据需求，使用 <code>describe</code> 方法分别查看 <code>df</code> 数据集中 <code>&#39;票价&#39;</code> 和 <code>&#39;父母与小孩个数&#39;</code> 两列的基本统计信息，并人工分析得出自己对于这些数据的认知。</p>
+<h5 id="实现-2"><a href="#实现-2" class="headerlink" title="实现"></a>实现</h5><p>首先查看 <code>&#39;票价&#39;</code> 列的基本统计信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;票价&#x27;</span>].describe()</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_220636.png" class="">
+
+<p>观察该统计数据可知，此列共有 <code>891</code> 个数据，其平均值为 <code>32.204208</code>，标准差为 <code>49.693429</code>，最小值为 <code>0.000000</code>；第 <code>25%</code> 分位数为 <code>7.910400</code>，第 <code>50%</code> 分位数为 <code>14.454200</code>，第 <code>75%</code> 分位数为 <code>31.000000</code>，最大值为 <code>512.329200</code>。</p>
+<p>再来查看 <code>&#39;父母与小孩个数&#39;</code> 列的基本统计信息。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df[<span class="string">&#x27;父母与小孩个数&#x27;</span>].describe()</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240722_221042.png" class="">
+
+<p>观察该统计数据可知，此列共有 <code>891</code> 个数据，其平均值为 <code>30.381594</code>，标准差为 <code>0.806057</code>，最小值为 <code>0.000000</code>；第 <code>25%</code> 分位数为 <code>0.000000</code>，第 <code>50%</code> 分位数为 <code>0.000000</code>，第 <code>75%</code> 分位数为 <code>0.000000</code>，最大值为 <code>0.000000</code>。</p>
+<h1 id="三、课后作业"><a href="#三、课后作业" class="headerlink" title="三、课后作业"></a>三、课后作业</h1><h2 id="作业一"><a href="#作业一" class="headerlink" title="作业一"></a>作业一</h2><img src="/2024/07/18/ai-class-2/Screenshot_20240722_223106.png" class="">
+
+<p>本作业的相关内容已融合进前文的笔记部分中，此处恕不赘述。可参看笔者提交的作业文件。</p>
+<h2 id="作业二"><a href="#作业二" class="headerlink" title="作业二"></a>作业二</h2><h3 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h3><img src="/2024/07/18/ai-class-2/Screenshot_20240722_223329.png" class="">
+
+<h3 id="分析-2"><a href="#分析-2" class="headerlink" title="分析"></a>分析</h3><p>本作业要求我们按照题目的要求，使用 Anaconda 创建给定条件下的虚拟环境，并使用该虚拟环境对给定的数据集 <code>pokemon.csv</code> 进行处理。在电脑上已安装完毕 Anaconda 的前提条件下，只需按照要求一步步满足即可。</p>
+<h3 id="实现-3"><a href="#实现-3" class="headerlink" title="实现"></a>实现</h3><h4 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h4><p>先<a target="_blank" rel="noopener" href="https://eumgrqwyfu.feishu.cn/docx/LfNpdTGmXo79EuxPtyPckOJ9nYd">前往下载</a>所需的数据集 <code>pokemon.csv</code>，以便完成后续事宜。</p>
+<p>鉴于题目要求我们使用给定名称的全新 Anaconda 虚拟环境（姓名首字母小写），打开终端并确保已激活到 Anaconda 上下文中。若尚未激活，先运行：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate base</span><br></pre></td></tr></table></figure>
+
+<p>进入到 Anaconda 的基础环境中。然后新建虚拟环境（笔者起名为 <code>hhw</code>）：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n hhw</span><br></pre></td></tr></table></figure>
+
+<p>等待一会儿，让虚拟环境创建完成；中途可能弹出确认选项 <code>[y/N]</code>，输入 <code>y</code> 后回车即可。</p>
+<p>创建完毕后，进入到这个新的虚拟环境中：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda activate hhw</span><br></pre></td></tr></table></figure>
+
+<p>并确保终端前方的小括号内的虚拟环境名为刚才所起的名字（<code>hhw</code>），以防后续操作出错。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_194806.png" class="">
+
+<p>为在这个新环境中使用 Jupyter Notebook，还需提前配置这个虚拟环境，安装必要的 Anaconda 软件包：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pip ipykernel jupyter</span><br></pre></td></tr></table></figure>
+
+<p>等待安装完成；同样可能出现确认选项 <code>[y/N]</code>，按前文所述方式操作即可。</p>
+<p>接下来还需使用 <code>pip</code> 安装 <code>pandas</code> 软件包，因为 Anaconda 默认是不带这个软件包的。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install pandas</span><br></pre></td></tr></table></figure>
+
+<p>等待安装完成。至此我们的新虚拟环境配置完成，可以启动 Jupyter Notebook 继续完成作业了。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>来处理题目所给的 <code>pokemon.csv</code> 数据集。我们使用 Python 处理该数据集，首先得导入相关模块，切记不能忘。这里因为笔者希望将程序的输出数据存入子文件夹 <code>run</code> 中，所以在导入相关模块后也进行了该文件夹的检测与创建。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">not</span> os.path.exists(<span class="string">&#x27;run&#x27;</span>):</span><br><span class="line">    os.mkdir(<span class="string">&#x27;run&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>使用 Pandas 处理数据集之前先要将其加载到 Python 中，并使用 <code>head</code> 方法适当查看验证数据集是否准确无误。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = pd.read_csv(<span class="string">&#x27;pokemon.csv&#x27;</span>)</span><br><span class="line">df.head()</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_200239.png" class="">
+
+<p>载入数据集后，来完成题目给出的一系列要求。</p>
+<h4 id="要求一"><a href="#要求一" class="headerlink" title="要求一"></a>要求一</h4><p>要求一：将列名更换为中文。借助 <code>DataFrame</code> 的 <code>rename</code> 方法来实现：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">df.rename(columns=&#123;</span><br><span class="line">    <span class="string">&#x27;Name&#x27;</span>: <span class="string">&#x27;名称&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Type 1&#x27;</span>: <span class="string">&#x27;类型1&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Type 2&#x27;</span>: <span class="string">&#x27;类型2&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Total&#x27;</span>: <span class="string">&#x27;总计&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;HP&#x27;</span>: <span class="string">&#x27;生命值&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Attack&#x27;</span>: <span class="string">&#x27;攻击力&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Defense&#x27;</span>: <span class="string">&#x27;防御力&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sp. Atk&#x27;</span>: <span class="string">&#x27;特别攻击力&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sp. Def&#x27;</span>: <span class="string">&#x27;特别防御力&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Speed&#x27;</span>: <span class="string">&#x27;速度&#x27;</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_200414.png" class="">
+
+<blockquote>
+<p><strong>注意</strong></p>
+<p>由于笔者所使用的操作系统存在输入法问题，不能在代码编辑器中输入中文，故后续代码中将保留使用纯英文。</p>
+</blockquote>
+<h4 id="要求二"><a href="#要求二" class="headerlink" title="要求二"></a>要求二</h4><p>要求二：分别存储单属性与双属性的妖怪，存储为不同 csv 文件。</p>
+<p>先借助 <code>DataFrame</code> 的 <code>loc</code> 属性筛选出单属性妖怪。其中用到了 Pandas 提供的 <code>isna</code> 函数，该函数判断某一列中各位置是否为 <code>NaN</code>，并映射为一个 <code>bool</code> 值列。观察数据集的特征知单属性妖怪，其第二属性 <code>Type 2</code> 一列的值均为 <code>NaN</code>，故可借助该特性筛选单属性妖怪。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">single = df.loc[pd.isna(df[<span class="string">&#x27;Type 2&#x27;</span>]), :]</span><br><span class="line">single</span><br></pre></td></tr></table></figure>
+
+<p>观察结果，均为单属性，符合我们的期望。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_201012.png" class="">
+
+<p>最后别忘了将筛选出来的数据储存为 csv 文件。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">single.to_csv(<span class="string">&#x27;run/single.csv&#x27;</span>, header=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>再来筛选双属性妖怪；同样借助 <code>loc</code> 属性和 <code>isna</code> 函数。与单属性相反的就是双属性，因此需要对 <code>isna</code> 函数的返回值进行取反操作；这点可以借助 <code>Series</code> 的 <code>map</code> 方法来实现。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">double = df.loc[pd.isna(df[<span class="string">&#x27;Type 2&#x27;</span>]).<span class="built_in">map</span>(<span class="keyword">lambda</span> it: <span class="keyword">not</span> it), :]</span><br><span class="line">double</span><br></pre></td></tr></table></figure>
+
+<p>观察结果，均为双属性，符合我们的期望。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_201627.png" class="">
+
+<p>同样地别忘了保存为 csv 文件。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double.to_csv(<span class="string">&#x27;run/double.csv&#x27;</span>, header=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="要求三"><a href="#要求三" class="headerlink" title="要求三"></a>要求三</h4><p>要求三：对于 <code>#</code> 重复的妖怪只保留第一条记录，并求出第一属性的种类数量和前三数量对应的种类。</p>
+<p><code>Index</code> 类型提供了一个 <code>duplicated</code> 方法，用以查找出数据集各行中重复的索引。不过因为我们希望保留不重复的索引，所以同样要对该方法的返回值取反。使用该方法与 <code>loc</code> 属性结合即可达到这个要求。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">df2 = df.reset_index()</span><br><span class="line">df2 = df2.loc[pd.Series(df.index.duplicated(keep=<span class="string">&#x27;first&#x27;</span>)).<span class="built_in">map</span>(<span class="keyword">lambda</span> it: <span class="keyword">not</span> it), :]</span><br><span class="line">df2 = df2.set_index(<span class="string">&#x27;#&#x27;</span>)</span><br><span class="line">df2</span><br></pre></td></tr></table></figure>
+
+<p>观察结果，<code>#</code> 重复的各行数据已被去除，符合我们的期望。</p>
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_202431.png" class="">
+
+<p>最后，别忘了将结果保存为 csv 文件。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double.to_csv(<span class="string">&#x27;run/double.csv&#x27;</span>, header=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>之后来求出第一属性的种类数量和前三数量对应的种类。</p>
+<p>我们可以使用 <code>Series</code> 的 <code>value_counts</code> 方法来统计列的不同数据种类的数量。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;The number of types of Type 1 within the dataset:&#x27;</span>, df2[<span class="string">&#x27;Type 1&#x27;</span>].value_counts().shape[<span class="number">0</span>])</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_203205.png" class="">
+
+<p>要查询在数量上名列前茅的列的数据种类，先将 <code>value_counts</code> 方法返回的 <code>Series</code> 进行按数量上的降序排序，进而实现查询数量上排前几的数据种类。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(</span><br><span class="line">    <span class="string">&#x27;Top 3 types of Type 1 in amount:&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;, &#x27;</span>.join(<span class="built_in">list</span>(</span><br><span class="line">        df2[<span class="string">&#x27;Type 1&#x27;</span>].value_counts()</span><br><span class="line">            .to_frame(name=<span class="string">&#x27;count&#x27;</span>)</span><br><span class="line">            .sort_values(by=<span class="string">&#x27;count&#x27;</span>, ascending=<span class="literal">False</span>)</span><br><span class="line">            .index[:<span class="number">3</span>]</span><br><span class="line">    ))</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_204001.png" class="">
+
+<h4 id="要求四"><a href="#要求四" class="headerlink" title="要求四"></a>要求四</h4><p>要求四：求第一属性和第二属性的组合种类。</p>
+<p>得益于 <code>DataFrame</code> 类型提供的 <code>apply</code> 方法，我们可以方便地对数据集的各列内容进行组合。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bitypes = <span class="built_in">list</span>(</span><br><span class="line">    df2.loc[df2.apply(<span class="keyword">lambda</span> it: <span class="built_in">type</span>(it[<span class="string">&#x27;Type 2&#x27;</span>]) <span class="keyword">is</span> <span class="built_in">str</span>, axis=<span class="number">1</span>), :]</span><br><span class="line">        .apply(<span class="keyword">lambda</span> it: <span class="string">f&quot;<span class="subst">&#123;it[<span class="string">&#x27;Type 1&#x27;</span>]&#125;</span>,<span class="subst">&#123;it[<span class="string">&#x27;Type 2&#x27;</span>]&#125;</span>&quot;</span>, axis=<span class="number">1</span>)</span><br><span class="line">        .value_counts()</span><br><span class="line">        .index</span><br><span class="line">)</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;\n&#x27;</span>.join(bitypes))</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_204540.png" class="">
+
+<h4 id="要求五"><a href="#要求五" class="headerlink" title="要求五"></a>要求五</h4><p>要求五：找出Total, HP, Attack, Defense, Sp. Atk, Sp. Def, Speed的最大值，平均值，方差，中位数。</p>
+<p>依次调用 <code>Series</code> 类型提供的统计方法 <code>max</code>、<code>mean</code>、<code>std</code> 以及 <code>median</code> 即可。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cols = [</span><br><span class="line">    <span class="string">&#x27;Total&#x27;</span>, <span class="string">&#x27;HP&#x27;</span>, <span class="string">&#x27;Attack&#x27;</span>, <span class="string">&#x27;Defense&#x27;</span>, <span class="string">&#x27;Sp. Atk&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;Sp. Def&#x27;</span>, <span class="string">&#x27;Speed&#x27;</span></span><br><span class="line">]</span><br><span class="line">methods = [<span class="string">&#x27;max&#x27;</span>, <span class="string">&#x27;mean&#x27;</span>, <span class="string">&#x27;std&#x27;</span>, <span class="string">&#x27;median&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> cols:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">f&quot;[<span class="subst">&#123;col&#125;</span>]&quot;</span>)</span><br><span class="line">    <span class="keyword">for</span> method <span class="keyword">in</span> methods:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">f&quot;<span class="subst">&#123;method&#125;</span> =&quot;</span>, <span class="built_in">getattr</span>(df2[col], method)())</span><br><span class="line">    <span class="built_in">print</span>()</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_205034.png" class="">
+
+<h4 id="要求六"><a href="#要求六" class="headerlink" title="要求六"></a>要求六</h4><p>要求六：将 <code>HP</code> 超过 <code>100</code> 的替换为 <code>high</code>，不足 <code>50</code> 的替换为 <code>low</code>，否则设为 <code>mid</code>。</p>
+<p>同样地，借助 <code>DataFrame</code> 的 <code>apply</code> 方法轻松实现。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">get_hp_level</span>(<span class="params">x</span>):</span><br><span class="line">    hp = <span class="built_in">int</span>(x[<span class="string">&#x27;HP&#x27;</span>])</span><br><span class="line">    <span class="keyword">if</span> hp &gt; <span class="number">100</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;high&#x27;</span></span><br><span class="line">    <span class="keyword">elif</span> hp &lt; <span class="number">50</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;low&#x27;</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&#x27;mid&#x27;</span></span><br><span class="line">    </span><br><span class="line">df3 = df2.copy()</span><br><span class="line">df3[<span class="string">&#x27;HP&#x27;</span>] = df3[<span class="string">&#x27;HP&#x27;</span>].astype(<span class="string">&#x27;object&#x27;</span>)</span><br><span class="line">df3.loc[:, <span class="string">&#x27;HP&#x27;</span>] = df3.apply(get_hp_level, axis=<span class="number">1</span>)</span><br><span class="line">df3</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_205522.png" class="">
+
+<h4 id="要求七"><a href="#要求七" class="headerlink" title="要求七"></a>要求七</h4><p>要求七：对 <code>total</code> 值进行降序排序并存储为 csv 文件。</p>
+<p>使用 <code>DataFrame</code> 的 <code>sort_values</code> 方法对数据集进行排序。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df3 = df3.sort_values(by=<span class="string">&#x27;Total&#x27;</span>, ascending=<span class="literal">False</span>)</span><br><span class="line">df3</span><br></pre></td></tr></table></figure>
+
+<img src="/2024/07/18/ai-class-2/Screenshot_20240723_210510.png" class="">
+
+<p>最后别忘了将排序后的数据保存为 csv 文件。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df3.to_csv(<span class="string">&#x27;run/final.csv&#x27;</span>, header=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="心得"><a href="#心得" class="headerlink" title="心得"></a>心得</h3><p>本作业针对前面所学的 Pandas 各方面的知识进行了充分的演练，让学生在掌握了使用 Pandas 软件包处理数据集的相关理论知识的同时，提供了样例数据集让学生按照指引实操对数据集的处理，并存储处理完成的数据。</p>
+<p>同时本次作业也改掉了上节课的作业中笔者所指出的作业覆盖面不足的问题，即作业不能完整地覆盖本节课所讲的全部知识点。这使得学生对知识点的掌握更加系统、更加全面，为后续基于 Pandas 的数据分析与处理的课程内容打下坚实基础。</p>
+
+    </article>
+    <!-- license -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://blog.srcres.top">src_resources</a>
+            <p>原文链接：<a href="https://blog.srcres.top/2024/07/18/ai-class-2/">https://blog.srcres.top/2024/07/18/ai-class-2/</a>
+            <p>发表日期：<a href="https://blog.srcres.top/2024/07/18/ai-class-2/">July 18th 2024, 9:00:35 pm</a>
+            <p>更新日期：<a href="https://blog.srcres.top/2024/07/18/ai-class-2/">July 18th 2024, 9:00:35 pm</a>
+            <p>版权声明：This blog is licensed under <a rel="license noopener" target="_blank" href="https://spdx.org/licenses/CC-BY-4.0.html">Creative Commons Attribution 4.0 International</a>.</p>
+        </div>
+    
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href="/2024/07/24/ai-class-3/" title="“第二课堂”AI实践 随堂笔记（三）：阿里云天池">
+                    <div class="nextTitle">“第二课堂”AI实践 随堂笔记（三）：阿里云天池</div>
+                </a>
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2024/07/17/ai-class-1/" title="“第二课堂”AI实践 随堂笔记（一）：Python环境配置及基础学习">
+                    <div class="prevTitle">“第二课堂”AI实践 随堂笔记（一）：Python环境配置及基础学习</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
+    
+</main>
+
+                <!-- profile -->
+                
+            </div>
+            <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+        <div class="social">
+            
+    
+        
+            
+                <a href="mailto:src.res.211@gmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/srcres258" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                    
+                    <img class="profile-qr" src="/assets/weixin_qrcode.jpg" />
+                </span>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer qq" title=qq>
+                    
+                    <img class="profile-qr" src="/assets/qq_qrcode.jpg" />
+                </span>
+            
+        
+    
+        
+            
+                <a href="https://t.me/srcres258" class="iconfont-archer telegram" target="_blank" title=telegram></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                <a href="https://space.bilibili.com/79461110" class="iconfont-archer bilibili" target="_blank" title=bilibili></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+        </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- website approve for Chinese user -->
+    
+    <!-- 不蒜子  -->
+    
+        <div class="busuanzi-container">
+            
+             
+                <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+            
+        </div>
+    	
+</footer>
+
+        </div>
+        <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9B%B6%E3%80%81%E8%AF%BE%E7%A8%8B%E4%B8%8E%E7%AC%94%E8%AE%B0%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF"><span class="toc-number">1.</span> <span class="toc-text">零、课程与笔记相关信息</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%AF%BE%E7%A8%8B%E7%9B%AE%E6%A0%87"><span class="toc-number">2.</span> <span class="toc-text">一、课程目标</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AF%BE%E5%A0%82%E5%86%85%E5%AE%B9"><span class="toc-number">3.</span> <span class="toc-text">二、课堂内容</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%AF%BE%E7%A8%8B%E5%89%8D%E8%A8%80"><span class="toc-number">3.1.</span> <span class="toc-text">1. 课程前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%B8%B8%E7%94%A8-Python-%E5%BA%93%E7%9A%84%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-number">3.2.</span> <span class="toc-text">2. 常用 Python 库的引入方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8-Pandas-%E4%BB%8E%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8A%A0%E8%BD%BD%E6%95%B0%E6%8D%AE"><span class="toc-number">3.3.</span> <span class="toc-text">3. 使用 Pandas 从文件中加载数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%AE%E9%80%9A%E8%AF%BB%E5%8F%96"><span class="toc-number">3.3.1.</span> <span class="toc-text">普通读取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%90%E5%9D%97%E8%AF%BB%E5%8F%96"><span class="toc-number">3.3.2.</span> <span class="toc-text">逐块读取</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%9B%B4%E6%94%B9%E6%95%B0%E6%8D%AE%E9%9B%86%E8%A1%A8%E5%A4%B4%E5%90%8D%E7%A7%B0%EF%BC%88%E6%9B%B4%E6%94%B9%E5%88%97%E5%90%8D%EF%BC%89"><span class="toc-number">3.4.</span> <span class="toc-text">4. 更改数据集表头名称（更改列名）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9C%80%E6%B1%82"><span class="toc-number">3.4.1.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%80"><span class="toc-number">3.4.2.</span> <span class="toc-text">方式一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F%E4%BA%8C"><span class="toc-number">3.4.3.</span> <span class="toc-text">方式二</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%88%9D%E6%AD%A5%E8%A7%82%E5%AF%9F"><span class="toc-number">3.5.</span> <span class="toc-text">5. 数据集的初步观察</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E6%91%98%E8%A6%81"><span class="toc-number">3.5.1.</span> <span class="toc-text">显示数据集的摘要</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%BE%E7%A4%BA%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E9%A6%96%E6%9C%AB%E8%A1%8C%E4%BF%A1%E6%81%AF"><span class="toc-number">3.5.2.</span> <span class="toc-text">显示数据集的首末行信息</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E7%A9%BA%E5%80%BC%E7%9A%84%E5%88%A4%E6%96%AD"><span class="toc-number">3.5.3.</span> <span class="toc-text">数据集空值的判断</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E4%BF%9D%E5%AD%98"><span class="toc-number">3.6.</span> <span class="toc-text">6. 数据集的保存</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E6%89%80%E6%9C%89%E5%88%97"><span class="toc-number">3.7.</span> <span class="toc-text">7. 获取数据集的所有列</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%88%97%E6%93%8D%E4%BD%9C"><span class="toc-number">3.8.</span> <span class="toc-text">8. 数据集的列操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%90%86%E8%AE%BA%E5%82%A8%E5%A4%87"><span class="toc-number">3.8.1.</span> <span class="toc-text">理论储备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83"><span class="toc-number">3.8.2.</span> <span class="toc-text">实战演练</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%9C%80%E6%B1%82-1"><span class="toc-number">3.8.2.1.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0"><span class="toc-number">3.8.2.2.</span> <span class="toc-text">实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E9%9A%90%E8%97%8F"><span class="toc-number">3.9.</span> <span class="toc-text">9. 数据集的隐藏</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E7%AD%9B%E9%80%89"><span class="toc-number">3.10.</span> <span class="toc-text">10. 数据集的筛选</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%B8%80"><span class="toc-number">3.10.1.</span> <span class="toc-text">题目一</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%BA%8C"><span class="toc-number">3.10.2.</span> <span class="toc-text">题目二</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%B8%89"><span class="toc-number">3.10.3.</span> <span class="toc-text">题目三</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E5%9B%9B"><span class="toc-number">3.10.4.</span> <span class="toc-text">题目四</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E4%BA%94"><span class="toc-number">3.10.5.</span> <span class="toc-text">题目五</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%88%86%E6%9E%90"><span class="toc-number">3.11.</span> <span class="toc-text">11. 数据集的分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F"><span class="toc-number">3.11.1.</span> <span class="toc-text">对数据进行排序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%90%86%E8%AE%BA%E5%82%A8%E5%A4%87-1"><span class="toc-number">3.11.1.1.</span> <span class="toc-text">理论储备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83-1"><span class="toc-number">3.11.1.2.</span> <span class="toc-text">实战演练</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9C%80%E6%B1%82-2"><span class="toc-number">3.11.1.2.1.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E6%9E%90"><span class="toc-number">3.11.1.2.2.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-1"><span class="toc-number">3.11.1.2.3.</span> <span class="toc-text">实现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E4%BA%8C%E5%85%83%E8%BF%90%E7%AE%97"><span class="toc-number">3.11.2.</span> <span class="toc-text">数据集的二元运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E6%8D%AE%E9%9B%86%E8%BF%9B%E8%A1%8C%E7%BB%9F%E8%AE%A1"><span class="toc-number">3.11.3.</span> <span class="toc-text">对数据集进行统计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E7%9C%8B%E6%95%B0%E6%8D%AE%E9%9B%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%9F%E8%AE%A1%E4%BF%A1%E6%81%AF"><span class="toc-number">3.11.4.</span> <span class="toc-text">查看数据集的基本统计信息</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%90%86%E8%AE%BA%E5%82%A8%E5%A4%87-2"><span class="toc-number">3.11.4.1.</span> <span class="toc-text">理论储备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9E%E6%88%98%E6%BC%94%E7%BB%83-2"><span class="toc-number">3.11.4.2.</span> <span class="toc-text">实战演练</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%9C%80%E6%B1%82-3"><span class="toc-number">3.11.4.2.1.</span> <span class="toc-text">需求</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%86%E6%9E%90-1"><span class="toc-number">3.11.4.2.2.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-2"><span class="toc-number">3.11.4.2.3.</span> <span class="toc-text">实现</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%AF%BE%E5%90%8E%E4%BD%9C%E4%B8%9A"><span class="toc-number">4.</span> <span class="toc-text">三、课后作业</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E4%B8%80"><span class="toc-number">4.1.</span> <span class="toc-text">作业一</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%9C%E4%B8%9A%E4%BA%8C"><span class="toc-number">4.2.</span> <span class="toc-text">作业二</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE"><span class="toc-number">4.2.1.</span> <span class="toc-text">题目</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%86%E6%9E%90-2"><span class="toc-number">4.2.2.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0-3"><span class="toc-number">4.2.3.</span> <span class="toc-text">实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"><span class="toc-number">4.2.3.1.</span> <span class="toc-text">环境准备</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%E4%B8%80"><span class="toc-number">4.2.3.2.</span> <span class="toc-text">要求一</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%E4%BA%8C"><span class="toc-number">4.2.3.3.</span> <span class="toc-text">要求二</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%E4%B8%89"><span class="toc-number">4.2.3.4.</span> <span class="toc-text">要求三</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%E5%9B%9B"><span class="toc-number">4.2.3.5.</span> <span class="toc-text">要求四</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%E4%BA%94"><span class="toc-number">4.2.3.6.</span> <span class="toc-text">要求五</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%E5%85%AD"><span class="toc-number">4.2.3.7.</span> <span class="toc-text">要求六</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A6%81%E6%B1%82%E4%B8%83"><span class="toc-number">4.2.3.8.</span> <span class="toc-text">要求七</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%83%E5%BE%97"><span class="toc-number">4.2.4.</span> <span class="toc-text">心得</span></a></li></ol></li></ol></li></ol>
+            </div>
+        
+        <!-- sidebar -->
+        <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+        <div class="sidebar-panel-archives">
+    <!-- 在 ejs 中将 archive 按照时间排序 -->
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 12
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+        
+            
+            
+            <div class="archive-year"> 2025 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/05</span>
+            <a class="archive-post-title" href="/2025/05/05/zotero-citation/">Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/05</span>
+            <a class="archive-post-title" href="/2025/05/05/zotero-addons/">Zotero 补充：插件相关安装说明</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2024 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/02</span>
+            <a class="archive-post-title" href="/2024/08/02/ai-class-4/">“第二课堂”AI实践 随堂笔记（四）：大语言模型</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/24</span>
+            <a class="archive-post-title" href="/2024/07/24/ai-class-3/">“第二课堂”AI实践 随堂笔记（三）：阿里云天池</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/18</span>
+            <a class="archive-post-title" href="/2024/07/18/ai-class-2/">“第二课堂”AI实践 随堂笔记（二）：Python环境配置及基础学习</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/17</span>
+            <a class="archive-post-title" href="/2024/07/17/ai-class-1/">“第二课堂”AI实践 随堂笔记（一）：Python环境配置及基础学习</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/31</span>
+            <a class="archive-post-title" href="/2024/03/31/kotlin-neoforge-demo-mod/">使用 Kotlin 语言开发 NeoForge 模组</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/30</span>
+            <a class="archive-post-title" href="/2024/03/30/rust-jni-demo/">使用 Rust 语言编写 Java JNI 实现</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span>
+            <a class="archive-post-title" href="/2024/03/21/gdsxsj-jxjst/">高等数学随记 - 一道极限计算题的简化求解</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/19</span>
+            <a class="archive-post-title" href="/2024/03/19/gdsxsj-syf/">高等数学随记 - 利用双元法求不定积分</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/08</span>
+            <a class="archive-post-title" href="/2024/03/08/intro-creativepagejump/">模组简介 - CreativePageJump</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/29</span>
+            <a class="archive-post-title" href="/2024/02/29/intro-creativetabsearch/">模组简介 - CreativeTabSearch</a>
+        </li>
+    
+    </div>
+</div>
+
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+        
+            <span class="sidebar-tag-name" data-tags="模组简介">
+                <span class="iconfont-archer">&#xe606;</span>
+                模组简介
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="高等数学随记">
+                <span class="iconfont-archer">&#xe606;</span>
+                高等数学随记
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="考研">
+                <span class="iconfont-archer">&#xe606;</span>
+                考研
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Rust">
+                <span class="iconfont-archer">&#xe606;</span>
+                Rust
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="JNI">
+                <span class="iconfont-archer">&#xe606;</span>
+                JNI
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Kotlin">
+                <span class="iconfont-archer">&#xe606;</span>
+                Kotlin
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="NeoForge">
+                <span class="iconfont-archer">&#xe606;</span>
+                NeoForge
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="“第二课堂”AI实践">
+                <span class="iconfont-archer">&#xe606;</span>
+                “第二课堂”AI实践
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Zotero">
+                <span class="iconfont-archer">&#xe606;</span>
+                Zotero
+            </span>
+        
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="模组简介">
+            <span class="iconfont-archer">&#xe60a;</span>
+            模组简介
+        </span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+
+    </div>
+</div>
+
+        <!-- site-meta -->
+        <script>
+    var siteMetaRoot = "/"
+    if (siteMetaRoot === "undefined") {
+        siteMetaRoot = '/'
+    }
+    var siteMeta = {
+        url: "https://blog.srcres.top",
+        root: siteMetaRoot,
+        author: "src_resources"
+    }
+</script>
+
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
+        <!-- main func -->
+        <script src="/scripts/main.js?v=20211217"></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v=20211217"></script>
+        <!-- fancybox -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+        <!-- algolia -->
+        
+        <!-- busuanzi -->
+        
+            <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+        
+        <!-- CNZZ -->
+        
+        <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
+        
+        <!-- mermaid -->
+        
+    </body>
+</html>

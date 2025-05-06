@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="default">
+    <!-- title -->
+
+
+    
+
+<!-- keywords -->
+
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="author" content="src_resources">
+    <meta name="renderer" content="webkit">
+    <meta name="copyright" content="src_resources">
+    
+        <meta name="keywords" content="hexo,hexo-theme,hexo-blog">
+    
+    <meta name="description" content="123">
+    <meta name="description" content="Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式首先，确保你的 Zotero 中已经收藏了需要的文献。   然后打开需要进行文献引用的 Word 文档。如果是已经正确安装好 Zotero 软件了的话，可以看到 Word 上方工具栏中多出了Zotero工具栏条目。   首先因为我们的论文需符合中国学位论文格式，所以先设置文档选项使其满足格式需求，点击Zot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式">
+<meta property="og:url" content="https://blog.srcres.top/2025/05/05/zotero-citation/index.html">
+<meta property="og:site_name" content="src_resources&#39; Blog">
+<meta property="og:description" content="Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式首先，确保你的 Zotero 中已经收藏了需要的文献。   然后打开需要进行文献引用的 Word 文档。如果是已经正确安装好 Zotero 软件了的话，可以看到 Word 上方工具栏中多出了Zotero工具栏条目。   首先因为我们的论文需符合中国学位论文格式，所以先设置文档选项使其满足格式需求，点击Zot">
+<meta property="og:locale">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_210506.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_214744.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_214824.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_214930.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_215049.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_215128.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_215234.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_215323.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_215421.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_215543.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_215747.png">
+<meta property="og:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_215858.png">
+<meta property="article:published_time" content="2025-05-05T14:22:29.000Z">
+<meta property="article:modified_time" content="2025-05-05T14:22:29.000Z">
+<meta property="article:author" content="src_resources">
+<meta property="article:tag" content="Zotero">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.srcres.top/2025/05/05/zotero-citation/Screenshot_20250506_210506.png">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="icon" href="/assets/favicon-avatar.ico">
+    
+    <title>Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式 · src_resources&#39;s Blog</title>
+    <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+/* This file is meant as a standalone workflow for
+- testing support for link[rel=preload]
+- enabling async CSS loading in browsers that do not support rel=preload
+- applying rel preload css once loaded, whether supported or not.
+*/ -->
+<script>
+    (function (w) {
+        'use strict'
+        // rel=preload support test
+        if (!w.loadCSS) {
+            w.loadCSS = function () {}
+        }
+        // define on the loadCSS obj
+        var rp = (loadCSS.relpreload = {})
+        // rel=preload feature support test
+        // runs once and returns a function for compat purposes
+        rp.support = (function () {
+            var ret
+            try {
+                ret = w.document.createElement('link').relList.supports('preload')
+            } catch (e) {
+                ret = false
+            }
+            return function () {
+                return ret
+            }
+        })()
+
+        // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+        // then change that media back to its intended value on load
+        rp.bindMediaToggle = function (link) {
+            // remember existing media attr for ultimate state, or default to 'all'
+            var finalMedia = link.media || 'all'
+
+            function enableStylesheet() {
+                link.media = finalMedia
+            }
+
+            // bind load handlers to enable media
+            if (link.addEventListener) {
+                link.addEventListener('load', enableStylesheet)
+            } else if (link.attachEvent) {
+                link.attachEvent('onload', enableStylesheet)
+            }
+
+            // Set rel and non-applicable media type to start an async request
+            // note: timeout allows this to happen async to let rendering continue in IE
+            setTimeout(function () {
+                link.rel = 'stylesheet'
+                link.media = 'only x'
+            })
+            // also enable media after 3 seconds,
+            // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+            setTimeout(enableStylesheet, 3000)
+        }
+
+        // loop through link elements in DOM
+        rp.poly = function () {
+            // double check this to prevent external calls from running
+            if (rp.support()) {
+                return
+            }
+            var links = w.document.getElementsByTagName('link')
+            for (var i = 0; i < links.length; i++) {
+                var link = links[i]
+                // qualify links to those with rel=preload and as=style attrs
+                if (
+                    link.rel === 'preload' &&
+                    link.getAttribute('as') === 'style' &&
+                    !link.getAttribute('data-loadcss')
+                ) {
+                    // prevent rerunning on link
+                    link.setAttribute('data-loadcss', true)
+                    // bind listeners to toggle media back
+                    rp.bindMediaToggle(link)
+                }
+            }
+        }
+
+        // if unsupported, run the polyfill
+        if (!rp.support()) {
+            // run once at least
+            rp.poly()
+
+            // rerun poly on an interval until onload
+            var run = w.setInterval(rp.poly, 500)
+            if (w.addEventListener) {
+                w.addEventListener('load', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            } else if (w.attachEvent) {
+                w.attachEvent('onload', function () {
+                    rp.poly()
+                    w.clearInterval(run)
+                })
+            }
+        }
+
+        // commonjs
+        if (typeof exports !== 'undefined') {
+            exports.loadCSS = loadCSS
+        } else {
+            w.loadCSS = loadCSS
+        }
+    })(typeof global !== 'undefined' ? global : this)
+</script>
+
+    <style type="text/css">
+    @font-face {
+        font-family: 'Oswald-Regular';
+        src: url("/font/Oswald-Regular.ttf");
+    }
+
+    body {
+        margin: 0;
+    }
+
+    header,
+    footer,
+    .back-top,
+    .sidebar,
+    .container,
+    .site-intro-meta,
+    .toc-wrapper {
+        display: none;
+    }
+
+    .site-intro {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        /* height: 50vh; */
+        overflow: hidden;
+    }
+
+    .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2.5s ease-out 0s infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+</style>
+
+    <link rel="preload" href="/css/style.css?v=20211217" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/css/dark.css?v=20211217" as="style">
+    <link rel="stylesheet" href="/css/dark.css">
+    <link rel="stylesheet" href="/css/mobile.css?v=20211217" media="(max-width: 960px)">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" as="script">
+    <link rel="preload" href="/scripts/main.js?v=20211217" as="script">
+    <link rel="preload" href="/scripts/dark.js?v=20211217" as="script">
+    <link rel="preload" href="/font/Oswald-Regular.ttf" as="font" crossorigin>
+    <link rel="preload" href="https://at.alicdn.com/t/font_327081_1dta1rlogw17zaor.woff" as="font" crossorigin>
+    <!-- algolia -->
+    
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="src_resources' Blog" type="application/atom+xml">
+</head>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof window.$ == undefined) {
+            console.warn('jquery load from jsdelivr failed, will load local script')
+            document.write('<script src="/lib/jquery.min.js" />')
+        }
+    </script>
+    
+        <body class="post-body">
+    
+        <!-- header -->
+        <header class="header header-mobile">
+    <!-- top read progress line -->
+    <div class="header-element">
+        <div class="read-progress"></div>
+    </div>
+    <!-- sidebar menu button -->
+    <div class="header-element">
+        
+            <div class="header-sidebar-menu">
+        
+            
+                <div style="padding-left: 1px;">&#xe775;</div>
+            
+        </div>
+    </div>
+    <!-- header actions -->
+    <div class="header-actions">
+        <!-- theme mode switch button -->
+        <span class="header-theme-btn header-element">
+            <i class="fas fa-adjust"></i>
+        </span>
+        <!-- back to home page text -->
+        <span class="home-link header-element">
+            <a href=/>src_resources's Blog</a>
+        </span>
+    </div>
+    <!-- toggle banner for post layout -->
+    
+        
+            <div class="banner">
+        
+            <div class="blog-title header-element">
+                <a href="/">src_resources&#39;s Blog</a>
+            </div>
+            <div class="post-title header-element">
+                <a href="#" class="post-name">Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式</a>
+            </div>
+        </div>
+    
+</header>
+
+        <!-- fixed footer -->
+        <footer class="footer-fixed">
+    <!-- back to top button -->
+    <div class="footer-fixed-element">
+        
+            <div class="back-top back-top-hidden">
+        
+        
+            <div>&#xe639;</div>
+        
+        </div>
+    </div>
+</footer>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="site-intro" style="
+
+
+
+
+
+
+
+    height:50vh;
+
+">
+    
+    <!-- 主页  -->
+    
+        
+    <!-- 404页  -->
+    
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-img" style="background-image: url(/assets/post-bg.jpg)"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+                Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+                
+            <!-- 404 -->
+            
+        </p>
+        <!-- 文章页 meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags="Zotero">Zotero</a>
+    
+</div>
+
+                
+                <!-- 文章字数统计 -->
+                
+                    <div class="post-intro-read">
+                        <span>字数统计: <span class="post-count word-count">996</span>阅读时长: <span class="post-count reading-time">3 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <!-- 撰写日期 -->
+                    <span class="iconfont-archer post-intro-calander">&#xe676;</span>
+                    <span class="post-intro-time">2025/05/05</span>
+                    <!-- busuanzi -->
+                    
+                        <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                            <span class="iconfont-archer post-intro-busuanzi">&#xe602;</span>
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    
+                    <!-- 文章分享 -->
+                    <span class="share-wrapper">
+                        <span class="iconfont-archer share-icon">&#xe71d;</span>
+                        <span class="share-text">Share</span>
+                        <ul class="share-list">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+            <script>
+  // get user agent
+  function getBrowserVersions() {
+    var u = window.navigator.userAgent
+    return {
+      userAgent: u,
+      trident: u.indexOf('Trident') > -1, //IE内核
+      presto: u.indexOf('Presto') > -1, //opera内核
+      webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+      gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+      mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+      ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+      android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+      iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1, //是否为iPhone或者安卓QQ浏览器
+      iPad: u.indexOf('iPad') > -1, //是否为iPad
+      webApp: u.indexOf('Safari') == -1, //是否为web应用程序，没有头部与底部
+      weixin: u.indexOf('MicroMessenger') == -1, //是否为微信浏览器
+      uc: u.indexOf('UCBrowser') > -1, //是否为android下的UC浏览器
+    }
+  }
+  var browser = {
+    versions: getBrowserVersions(),
+  }
+  console.log('userAgent: ' + browser.versions.userAgent)
+
+  // callback
+  function fontLoaded() {
+    console.log('font loaded')
+    if (document.getElementsByClassName('site-intro-meta')) {
+      document
+        .getElementsByClassName('intro-title')[0]
+        .classList.add('intro-fade-in')
+      document
+        .getElementsByClassName('intro-subtitle')[0]
+        .classList.add('intro-fade-in')
+      var postIntros = document.getElementsByClassName('post-intros')[0]
+      if (postIntros) {
+        postIntros.classList.add('post-fade-in')
+      }
+    }
+  }
+
+  // UC不支持跨域，所以直接显示
+  function asyncCb() {
+    if (browser.versions.uc) {
+      console.log('UCBrowser')
+      fontLoaded()
+    } else {
+      WebFont.load({
+        custom: {
+          families: ['Oswald-Regular'],
+        },
+        loading: function () {
+          // 所有字体开始加载
+          // console.log('font loading');
+        },
+        active: function () {
+          // 所有字体已渲染
+          fontLoaded()
+        },
+        inactive: function () {
+          // 字体预加载失败，无效字体或浏览器不支持加载
+          console.log('inactive: timeout')
+          fontLoaded()
+        },
+        timeout: 5000, // Set the timeout to two seconds
+      })
+    }
+  }
+
+  function asyncErr() {
+    console.warn('script load from CDN failed, will load local script')
+  }
+
+  // load webfont-loader async, and add callback function
+  function async(u, cb, err) {
+    var d = document,
+      t = 'script',
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0]
+    o.src = u
+    if (cb) {
+      o.addEventListener(
+        'load',
+        function (e) {
+          cb(null, e)
+        },
+        false
+      )
+    }
+    if (err) {
+      o.addEventListener(
+        'error',
+        function (e) {
+          err(null, e)
+        },
+        false
+      )
+    }
+    s.parentNode.insertBefore(o, s)
+  }
+
+  var asyncLoadWithFallBack = function (arr, success, reject) {
+    var currReject = function () {
+      reject()
+      arr.shift()
+      if (arr.length) async(arr[0], success, currReject)
+    }
+
+    async(arr[0], success, currReject)
+  }
+
+  asyncLoadWithFallBack(
+    [
+      'https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.min.js',
+      'https://cdn.bootcss.com/webfont/1.6.28/webfontloader.js',
+      "/lib/webfontloader.min.js",
+    ],
+    asyncCb,
+    asyncErr
+  )
+</script>
+
+            <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
+            <div class="container container-unloaded">
+                <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="Zotero-补充：如何在-Word-中使用-Zotero-引用文献，并符合中国学位论文格式"><a href="#Zotero-补充：如何在-Word-中使用-Zotero-引用文献，并符合中国学位论文格式" class="headerlink" title="Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式"></a>Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式</h1><p>首先，确保你的 Zotero 中已经收藏了需要的文献。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_210506.png" class="">
+
+<p>然后打开需要进行文献引用的 Word 文档。如果是已经正确安装好 Zotero 软件了的话，可以看到 Word 上方工具栏中多出了<code>Zotero</code>工具栏条目。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_214744.png" class="">
+
+<p>首先因为我们的论文需符合中国学位论文格式，所以先设置文档选项使其满足格式需求，点击<code>Zotero</code>工具栏条目中的<code>Document Preferences</code>按钮，此时会弹出“文档首选项”窗口，可以在其中更改文献样式。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_214824.png" class="">
+
+<p>但初次打开这个窗口可能找不到所需的中国学位论文样式，因为还没有安装这个样式。回到我们的 Zotero 软件，点击左上角<code>编辑</code>-&gt;<code>设置</code>，在设置中选择<code>引用</code>，打开样式管理器。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_214930.png" class="">
+
+<p>点击<code>获取更多样式...</code>，搜索<code>GB</code>。此时就会搜出<code>China National Standard</code>各种国标样式，任选一个（推荐选择带<code>numeric</code>的样式）。然后该样式就被添加到样式管理器中。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_215049.png" class="">
+
+<p>回到 Word 软件，此时再单击<code>Document Preferences</code>按钮后，就能找到刚才下载好的中国学位论文样式了。选择样式，点击<code>OK</code>。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_215128.png" class="">
+
+<p>此时在 Word 中还看不出变化，因为我们还没在文档中插入引用文献。将光标移动至文档中需要插入引用文献的地方，点击<code>Zotero</code>工具栏条目中的<code>Add/Edit Citation</code>按钮，弹出引用文献搜索栏。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_215234.png" class="">
+
+<p>但经典视图更加直观，所以我们切换至经典视图，点击左边的“Z”字图标，选择<code>经典视图</code>，弹出“添加&#x2F;编辑引注”窗口，选择希望引用的文献点击<code>OK</code>，此时就会在光标出出现文献引用角标。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_215323.png" class="">
+
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_215421.png" class="">
+
+<p>然后就是添加参考文献列表。将光标移动至文档末尾，输入<code>参考文献</code>后回车。点击<code>Zotero</code>工具栏条目中的<code>Add/Edit Bibliography</code>按钮，即可自动将文档中所引用的全部参考文献列出在文档末尾，且格式也是符合中国学位论文格式的。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_215543.png" class="">
+
+<p>若要删除文档中所引用的某条文献，只需删除对应的角标。然后点击<code>Zotero</code>工具栏条目中的<code>Refresh</code>按钮，就会自动更新角标数字以及文献列表。</p>
+<p>最后需要说明的是，使用这个自动化工具会导致文档中包含域代码。选中参考文献文字，发现文字背后有块状黑色阴影，表示这些文字是由域代码定义的。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_215747.png" class="">
+
+<p>在将这篇文档正式发表前，须先将域代码删除。下面演示去除域代码的步骤。</p>
+<blockquote>
+<p><strong>注意：</strong></p>
+<p>去除域代码前须先将原文档文件复制一份进行备份。域代码的存在是<code>Zotero</code>工具栏能正常使用的前提，如果去除域代码后仍想编辑文献引用，就不能再使用<code>Zotero</code>工具栏了。所以要提前备份一份，以后还想修改的话就可以在备份文档之上修改。</p>
+</blockquote>
+<p>使用鼠标将参考文献部分的文字全部选中。然后点击<code>Unlink Citations</code>，即可将域代码去除。此时就会弹出提示框提示去除域代码后会导致<code>Zotero</code>工具栏无法继续使用，要再次回想一下是否留了备份，确认了就点<code>确定</code>。</p>
+<img src="/2025/05/05/zotero-citation/Screenshot_20250506_215858.png" class="">
+
+<p>关于文档格式问题，<code>Zotero</code>工具栏的格式设定貌似只能用于文献引用时自动编排格式，要排全文的格式（使其符合国标中国学位论文格式）的话还是得手动编排文档其余部分。这一点就是纯手动的，比较麻烦，但如果用 LaTeX 的话就方便很多。以后可以尝试一下。</p>
+
+    </article>
+    <!-- license -->
+    
+        <div class="license-wrapper">
+            <p>原文作者：<a href="https://blog.srcres.top">src_resources</a>
+            <p>原文链接：<a href="https://blog.srcres.top/2025/05/05/zotero-citation/">https://blog.srcres.top/2025/05/05/zotero-citation/</a>
+            <p>发表日期：<a href="https://blog.srcres.top/2025/05/05/zotero-citation/">May 5th 2025, 10:22:29 pm</a>
+            <p>更新日期：<a href="https://blog.srcres.top/2025/05/05/zotero-citation/">May 5th 2025, 10:22:29 pm</a>
+            <p>版权声明：This blog is licensed under <a rel="license noopener" target="_blank" href="https://spdx.org/licenses/CC-BY-4.0.html">Creative Commons Attribution 4.0 International</a>.</p>
+        </div>
+    
+    <!-- paginator -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href="/2025/05/05/zotero-addons/" title="Zotero 补充：插件相关安装说明">
+                    <div class="prevTitle">Zotero 补充：插件相关安装说明</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- comment -->
+    
+        <div class="post-comment">
+            <!-- 来必力 City 版安装代码 -->
+
+
+            
+
+            
+
+            
+
+            <!-- utteranc评论 -->
+
+
+            <!-- partial('_partial/comment/changyan') -->
+            <!--PC版-->
+
+
+            
+            
+
+            
+
+        </div>
+    
+    <!-- timeliness note -->
+    <!-- idea from: https://hexo.fluid-dev.com/posts/hexo-injector/#%E6%96%87%E7%AB%A0%E6%97%B6%E6%95%88%E6%80%A7%E6%8F%90%E7%A4%BA -->
+    
+    <!-- Mathjax -->
+    
+</main>
+
+                <!-- profile -->
+                
+            </div>
+            <footer class="footer footer-unloaded">
+    <!-- social  -->
+    
+        <div class="social">
+            
+    
+        
+            
+                <a href="mailto:src.res.211@gmail.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/srcres258" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                    
+                    <img class="profile-qr" src="/assets/weixin_qrcode.jpg" />
+                </span>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer qq" title=qq>
+                    
+                    <img class="profile-qr" src="/assets/qq_qrcode.jpg" />
+                </span>
+            
+        
+    
+        
+            
+                <a href="https://t.me/srcres258" class="iconfont-archer telegram" target="_blank" title=telegram></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+            
+                <a href="https://space.bilibili.com/79461110" class="iconfont-archer bilibili" target="_blank" title=bilibili></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+        </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span><span id="theme-info">theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">Archer</a></span>
+    </div>
+    <!-- website approve for Chinese user -->
+    
+    <!-- 不蒜子  -->
+    
+        <div class="busuanzi-container">
+            
+             
+                <span id="busuanzi_container_site_pv">PV: <span id="busuanzi_value_site_pv"></span> :)</span>
+            
+        </div>
+    	
+</footer>
+
+        </div>
+        <!-- toc -->
+        
+            <div class="toc-wrapper toc-wrapper-loding" style=
+
+
+
+
+
+
+
+    top:50vh;
+
+>
+                <div class="toc-catalog">
+                    <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+                </div>
+                <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Zotero-%E8%A1%A5%E5%85%85%EF%BC%9A%E5%A6%82%E4%BD%95%E5%9C%A8-Word-%E4%B8%AD%E4%BD%BF%E7%94%A8-Zotero-%E5%BC%95%E7%94%A8%E6%96%87%E7%8C%AE%EF%BC%8C%E5%B9%B6%E7%AC%A6%E5%90%88%E4%B8%AD%E5%9B%BD%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%E6%A0%BC%E5%BC%8F"><span class="toc-number">1.</span> <span class="toc-text">Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式</span></a></li></ol>
+            </div>
+        
+        <!-- sidebar -->
+        <div class="sidebar sidebar-hide">
+    <ul class="sidebar-tabs sidebar-tabs-active-0">
+        <li class="sidebar-tab-archives"><span class="iconfont-archer">&#xe67d;</span><span class="tab-name">Archive</span></li>
+        <li class="sidebar-tab-tags"><span class="iconfont-archer">&#xe61b;</span><span class="tab-name">Tag</span></li>
+        <li class="sidebar-tab-categories"><span class="iconfont-archer">&#xe666;</span><span class="tab-name">Cate</span></li>
+    </ul>
+    <div class="sidebar-content sidebar-content-show-archive">
+        <div class="sidebar-panel-archives">
+    <!-- 在 ejs 中将 archive 按照时间排序 -->
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+    
+    <div class="total-and-search">
+        <div class="total-archive">
+        Total : 12
+        </div>
+        <!-- search  -->
+        
+    </div>
+    
+    <div class="post-archive">
+    
+        
+            
+            
+            <div class="archive-year"> 2025 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/05</span>
+            <a class="archive-post-title" href="/2025/05/05/zotero-citation/">Zotero 补充：如何在 Word 中使用 Zotero 引用文献，并符合中国学位论文格式</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">05/05</span>
+            <a class="archive-post-title" href="/2025/05/05/zotero-addons/">Zotero 补充：插件相关安装说明</a>
+        </li>
+    
+        
+            
+            
+                
+                </ul>
+            
+            <div class="archive-year"> 2024 </div>
+            <ul class="year-list">
+            
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/02</span>
+            <a class="archive-post-title" href="/2024/08/02/ai-class-4/">“第二课堂”AI实践 随堂笔记（四）：大语言模型</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/24</span>
+            <a class="archive-post-title" href="/2024/07/24/ai-class-3/">“第二课堂”AI实践 随堂笔记（三）：阿里云天池</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/18</span>
+            <a class="archive-post-title" href="/2024/07/18/ai-class-2/">“第二课堂”AI实践 随堂笔记（二）：Python环境配置及基础学习</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/17</span>
+            <a class="archive-post-title" href="/2024/07/17/ai-class-1/">“第二课堂”AI实践 随堂笔记（一）：Python环境配置及基础学习</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/31</span>
+            <a class="archive-post-title" href="/2024/03/31/kotlin-neoforge-demo-mod/">使用 Kotlin 语言开发 NeoForge 模组</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/30</span>
+            <a class="archive-post-title" href="/2024/03/30/rust-jni-demo/">使用 Rust 语言编写 Java JNI 实现</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/21</span>
+            <a class="archive-post-title" href="/2024/03/21/gdsxsj-jxjst/">高等数学随记 - 一道极限计算题的简化求解</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/19</span>
+            <a class="archive-post-title" href="/2024/03/19/gdsxsj-syf/">高等数学随记 - 利用双元法求不定积分</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">03/08</span>
+            <a class="archive-post-title" href="/2024/03/08/intro-creativepagejump/">模组简介 - CreativePageJump</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">02/29</span>
+            <a class="archive-post-title" href="/2024/02/29/intro-creativetabsearch/">模组简介 - CreativeTabSearch</a>
+        </li>
+    
+    </div>
+</div>
+
+        <div class="sidebar-panel-tags">
+    <div class="sidebar-tags-name">
+        
+            <span class="sidebar-tag-name" data-tags="模组简介">
+                <span class="iconfont-archer">&#xe606;</span>
+                模组简介
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="高等数学随记">
+                <span class="iconfont-archer">&#xe606;</span>
+                高等数学随记
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="考研">
+                <span class="iconfont-archer">&#xe606;</span>
+                考研
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Rust">
+                <span class="iconfont-archer">&#xe606;</span>
+                Rust
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="JNI">
+                <span class="iconfont-archer">&#xe606;</span>
+                JNI
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Kotlin">
+                <span class="iconfont-archer">&#xe606;</span>
+                Kotlin
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="NeoForge">
+                <span class="iconfont-archer">&#xe606;</span>
+                NeoForge
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="“第二课堂”AI实践">
+                <span class="iconfont-archer">&#xe606;</span>
+                “第二课堂”AI实践
+            </span>
+        
+            <span class="sidebar-tag-name" data-tags="Zotero">
+                <span class="iconfont-archer">&#xe606;</span>
+                Zotero
+            </span>
+        
+    </div>
+    <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+        缺失模块，请参考主题文档进行安装配置：https://github.com/fi3ework/hexo-theme-archer#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98
+    </div> 
+    <div class="sidebar-tags-list"></div>
+</div>
+
+        <div class="sidebar-panel-categories">
+    <div class="sidebar-categories-name">
+    
+        <span class="sidebar-category-name" data-categories="模组简介">
+            <span class="iconfont-archer">&#xe60a;</span>
+            模组简介
+        </span>
+    
+    </div>
+    <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
+    <div class="sidebar-categories-list"></div>
+</div>
+
+    </div>
+</div>
+
+        <!-- site-meta -->
+        <script>
+    var siteMetaRoot = "/"
+    if (siteMetaRoot === "undefined") {
+        siteMetaRoot = '/'
+    }
+    var siteMeta = {
+        url: "https://blog.srcres.top",
+        root: siteMetaRoot,
+        author: "src_resources"
+    }
+</script>
+
+        <!-- import experimental options here -->
+        <!-- Custom Font -->
+
+
+        <!-- main func -->
+        <script src="/scripts/main.js?v=20211217"></script>
+        <!-- dark mode -->
+        <script src="/scripts/dark.js?v=20211217"></script>
+        <!-- fancybox -->
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" defer></script>
+        <!-- algolia -->
+        
+        <!-- busuanzi -->
+        
+            <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" async></script>
+        
+        <!-- CNZZ -->
+        
+        <!-- async load share.js -->
+        
+            <script src="/scripts/share.js?v=20211217" async></script>
+        
+        <!-- mermaid -->
+        
+    </body>
+</html>
