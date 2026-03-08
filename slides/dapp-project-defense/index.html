@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./static/css/base.css" rel="stylesheet">
+    <link href="./static/css/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.font.im/css?family=Source+Serif+Pro%7CLato%7CInconsolata" rel="stylesheet"
+        type="text/css">
+    <title> slide </title>
+    <!-- browser favicon -->
+    <link rel="shortcut icon" href="./static/img/favicon.png">
+    <style>
+        .font-sans {
+            font-family: 'Lato', 'SimHei', 'STHeiti', 'SimHei', 'Serif';
+        }
+
+        .font-serif {
+            font-family: 'Source Serif Pro', 'Songti SC', 'SimSun', 'Serif', serif;
+        }
+    </style>
+    <!-- <link rel="stylesheet" href="https://jyywiki.cn/static/katex/katex.min.css">
+    <script defer src="https://jyywiki.cn/static/katex/katex.min.js"></script> -->
+    <link rel="stylesheet" href="./static/katex/katex.min.css">
+    <script defer src="./static/katex/katex.min.js"></script>
+    <!-- <script defer src="https://jyywiki.cn/static/katex/auto-render.min.js"
+        integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05"
+        crossorigin="anonymous"></script> -->
+    <script defer src="./static/katex/auto-render.min.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            renderMathInElement(document.body, {
+                // customised options
+                // &#8226; auto-render specific keys, e.g.:
+                delimiters: [
+                    { left: '$$', right: '$$', display: true },
+                    { left: '$', right: '$', display: false },
+                    { left: '\\(', right: '\\)', display: false },
+                    { left: '\\[', right: '\\]', display: true }
+                ],
+                // &#8226; rendering keys, e.g.:
+                throwOnError: false
+            });
+        });
+    </script>
+
+    <link rel="stylesheet" href="./static/reveal/reveal.css">
+    <link rel="stylesheet" href="./static/reveal/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="./static/jyy/jyy.css">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <div class="reveal">
+        <div class="slides">
+            <section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">区块链实习答辩</h1>
+<hr/>
+
+<blockquote>
+<p class="font-serif my-1">共识机制与智能合约生产实习</p>
+<p class="font-serif my-1">作者: 胡皓文</p>
+<p class="font-serif my-1">GitHub: <a href="https://github.com/srcres258">srcres258</a></p>
+</blockquote></div></div></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">前情提要: 我燃尽了</h1>
+<hr/>
+
+<blockquote>
+<p class="font-serif my-1">一些个人感慨</p>
+</blockquote></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">前情提要: 我燃尽了</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">首先感谢老师为我们提供这次宝贵的实习机会, 并让我们答辩.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">通过本次实习, 我们受益匪浅.</li>
+</ul>
+</li>
+</ul><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">个人感慨: Ethereum DApp 开发还是有很大的上手难度的</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">自己低估了开发工作量</p>
+</li>
+</ul></div><div class="fragment" data-fragment-index="2"><div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code>之前一直在准备自己期末考试 (1月19号的新思想, 花了较多时间)
+</code></pre></div></div><div class="fragment" data-fragment-index="3"><div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code>于是1月20号才开始上手项目
+</code></pre></div></div><div class="fragment" data-fragment-index="4"><ul class="list-disc font-serif">
+<li class="ml-8">起初以为很简单, 但是嘛...</li>
+</ul></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">前情提要: 我燃尽了 (cont'd)</h2>
+<p class="font-serif my-1"/><center>
+<img class="inline" src="./static/img/ccec9c763eae4ada9a28d0a14ed0c829.png" width="100px"/>
+<img class="inline" src="./static/img/2b120a7c9a8247588358ccb8c9139898.png" width="300px"/>
+<img class="inline" src="./static/img/b9e274df189a48dd955010da40faf419.png" width="400px"/>
+</center>
+<p class="font-serif my-1">工作量还是相当大的...</p></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">前情提要: 我燃尽了 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">自己学了 Solidity 语言, 会写智能合约后端.</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">以为 DApp 前端的开发也得心应手 (很容易上手).</p>
+</li>
+</ul><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">结果...</li>
+</ul></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">前情提要: 我燃尽了 (cont'd)</h2>
+<p class="font-serif my-1"/><center style="display: flex; justify-content: center;">
+<figure>
+<img src="./static/img/05a641870e2c4924b1618d8139367878.png" width="300px"/>
+<figcaption style="font-size: 18px;">莫名的合约调用错误</figcaption>
+</figure>
+<figure>
+<img src="./static/img/bee06cdfd8ab47b39a2066848d455eb5.png" width="300px"/>
+<figcaption style="font-size: 18px;">前端合约连接错误</figcaption>
+</figure>
+<figure>
+<img src="./static/img/84537fb461134ed999536ce927de2278.png" width="300px"/>
+<figcaption style="font-size: 18px;">与前端框架相关的错误</figcaption>
+</figure>
+<p class="font-serif my-1"/></center></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">前情提要: 我燃尽了 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">过程中还遇到了很多 trivial errors</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">限于忘记截图记录, 不方便 present</li>
+</ul>
+</li>
+</ul><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">教训: 以后实事求是, 避免盲目自信</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">特别是对于自己尚且生疏的技术栈</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">需要给自己留够时间 (合理安排时间)</p>
+</li>
+</ul>
+</li>
+</ul></div><div class="fragment" data-fragment-index="2"><ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">其实对于本次实习, 如果时间充裕, 我能做得更好</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">主要因为 <u>期末备考</u> , 以及 <u>个人参与的一些科研项目</u> , 耽误了实习进展</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">以后也会投入更多精力到 main task 上</p>
+</li>
+</ul>
+</li>
+</ul></div></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">项目概述及成果展示</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">项目概述</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">项目名称: <a href="https://github.com/srcres258/dapp-pet-shop-new">Pet Shop DApp</a></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">(灵感就是来源于上个实习的 <a href="https://github.com/OffchainLabs/demo-dapp-pet-shop">"Pet Shop"</a>)</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">但完全自己从头实现了一个 own version</p>
+</li>
+</ul>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">基本功能</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">宠物 (Pet) 的 <code>mint</code> 与 <code>burn</code></p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">宠物代币 (Token) 的兑换</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">用户之间进行宠物交易</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">查看用户基本信息 (拥有多少宠物代币, 以及宠物)</p>
+</li>
+</ul>
+</li>
+</ul></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">项目成果展示</h2>
+<p class="font-serif my-1">已部署到了 <a href="https://pet-shop.srcres258.top/">公网</a> 上, 大家可以访问.</p>
+<p class="font-serif my-1"><img src="./static/img/4c0b8fd188954dd38df8b2ee64d676eb.png"/></p></div></section><section data-auto-animate><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">功能说明</h2>
+<p class="font-serif my-1"><strong>Viewer 界面</strong>: 查看用户基本信息 (拥有哪些资产).</p>
+<p class="font-serif my-1"><img src="./static/img/e3eaaad103dd4eb19d8d146ea34ce72e.png"/></p></div></section><section data-auto-animate><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">功能说明 (cont'd)</h2>
+<p class="font-serif my-1"><strong>Exchange 界面</strong>: 用户用 ETH 兑换 <strong>CustomToken</strong></p>
+<p class="font-serif my-1">(本 DApp 自定义的一种 ERC-20 Token).</p>
+<p class="font-serif my-1"><img src="./static/img/13ad75a697454792aba0744ee288e6b8.png"/></p></div></section><section data-auto-animate><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">功能说明 (cont'd)</h2>
+<p class="font-serif my-1"><strong>Trade 界面</strong>: 用户发起交易 (向买家发出交易请求，附带上自己拥有的宠物).</p>
+<p class="font-serif my-1"><img src="./static/img/2e55448c7ddf4f2ba72eeb3f1c218a0e.png"/></p></div></section><section data-auto-animate><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">功能说明 (cont'd)</h2>
+<p class="font-serif my-1"><strong>Pet Manage 界面</strong>: 用户提供信息, 为自己的账户生成/销毁 Pet.</p>
+<p class="font-serif my-1"><img src="./static/img/2fc7996410e64375894c6bfc188e2e89.png"/></p></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">使用方式</h2>
+<p class="font-serif my-1">使用本 DApp 前, 需要先连接钱包 (在Wallet Page).</p>
+<p class="font-serif my-1"><img src="./static/img/ca0e7f42ea4b45c6b43b83e1d9245927.png"/></p></div></section><section data-auto-animate><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">使用方式 (cont'd)</h2>
+<p class="font-serif my-1">在自己的钱包 App 中确认连接.</p>
+<p class="font-serif my-1"><img src="./static/img/c0653ec77d034a34a2e448a80fb8f946.png"/></p></div></section><section data-auto-animate><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">使用方式 (cont'd)</h2>
+<p class="font-serif my-1">随后再前往各界面, 即可正常操作.</p>
+<p class="font-serif my-1"><img src="./static/img/15eec0e2a5734c9ea6ed50c346e3aad8.png"/></p></div></section><section data-auto-animate><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">使用方式 (cont'd)</h2>
+<p class="font-serif my-1"><img src="./static/img/62037413d606495a838b58460929740e.png"/></p></div></section><section data-auto-animate><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">使用方式 (cont'd)</h2>
+<p class="font-serif my-1"><img src="./static/img/2db6c0fa63f34683a0dc0cf9d21a7ed7.png"/></p></div></section><section data-auto-animate><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">使用方式 (cont'd)</h2>
+<p class="font-serif my-1"><img src="./static/img/0b7a43f934304aa7b9d93ef1704bf4c2.png"/></p></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">技术栈浅析</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">技术栈浅析</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">本 DApp 前后端分离.</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1"><a href="https://github.com/srcres258/dapp-pet-shop-new/tree/master/src"><strong>后端</strong></a>采用 Solidity 语言编写, 以太坊智能合约实现.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">部署在 <a href="https://ephemery.dev/">Ephemery</a> testnet 上</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">(所以要用的话得自己先去 <a href="https://ephemery-faucet.pk910.de/">Faucet</a> 领点 ETH)</p>
+</li>
+</ul>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1"><a href="https://github.com/srcres258/dapp-pet-shop-new/tree/master/frontend"><strong>前端</strong></a> Web 页面实现上, 用到如下技术栈</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1"><a href="https://cn.vite.dev/guide/">Vite</a> - 用于便捷测试与 debug, 以及静态网页 build</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1"><a href="https://react.dev/">React</a> - 便于组件化编写网页内容的各个组成成分</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1"><a href="https://wagmi.sh/">wagmi</a> - 与 Web3 钱包 App 交互, 后端智能合约调用</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">(舍弃了 Ether.js 等传统命令式 lib)</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">除此以外, 适当用了 <a href="https://tailwindcss.com/">TailwindCSS</a>, <a href="https://viem.sh/">Viem</a> 等辅助 lib</p>
+</li>
+</ul>
+</li>
+</ul></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">后端原理解析</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">后端原理解析</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">后端基于 Solidity 实现.</li>
+</ul><div class="fragment" data-fragment-index="1"><div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="o">[</span><span class="n">I</span><span class="o">]</span><span class="w"> </span><span class="n">srcres</span><span class="nv">@srcres</span><span class="o">-</span><span class="n">desktop</span><span class="w"> </span><span class="o">~/</span><span class="n">C</span><span class="o">/</span><span class="n">L</span><span class="o">/</span><span class="n">dapp</span><span class="o">-</span><span class="n">pet</span><span class="o">-</span><span class="n">shop</span><span class="o">-</span><span class="k">new</span><span class="w"> </span><span class="p">(</span><span class="n">master</span><span class="p">)</span><span class="o">&gt;</span><span class="w"> </span><span class="n">tree</span><span class="w"> </span><span class="n">src</span><span class="w">                            </span><span class="mi">16</span><span class="err">:</span><span class="mi">55</span><span class="err">:</span><span class="mi">51</span>
+<span class="n">src</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">CustomPet</span><span class="p">.</span><span class="n">sol</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">CustomToken</span><span class="p">.</span><span class="n">sol</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">Exchange</span><span class="p">.</span><span class="n">sol</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">TradeFactory</span><span class="p">.</span><span class="n">sol</span>
+<span class="err">├──</span><span class="w"> </span><span class="n">Trade</span><span class="p">.</span><span class="n">sol</span>
+<span class="err">└──</span><span class="w"> </span><span class="n">Viewer</span><span class="p">.</span><span class="n">sol</span>
+
+<span class="mi">1</span><span class="w"> </span><span class="n">directory</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="w"> </span><span class="n">files</span>
+</code></pre></div></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">后端原理解析 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1"><strong>CustomPet.sol</strong> - ERC-721 Token (CP)</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">由本 DApp 定义的 Pet (宠物), 管理自定义宠物创建和属性.</li>
+</ul>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1"><strong>CustomToken.sol</strong> - ERC-20 Token (CT)</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">本 DApp 自定义的一种货币, 在用户之间进行 Trade 时使用.</li>
+</ul>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1"><strong>Exchange.sol</strong> - ETH 与 (CT) 之间兑换</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">处理代币交换和流动性.</li>
+</ul>
+</li>
+</ul></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">后端原理解析 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1"><strong>Trade.sol</strong> - 代表用户之间的宠物交易</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">执行宠物交易逻辑.</li>
+</ul>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1"><strong>TradeFactory.sol</strong> - 为用户提供 Trade 创建服务</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">创建和管理交易实例.</li>
+</ul>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1"><strong>Viewer.sol</strong> - 为用户提供资产讯息查询服务</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">提供合约数据查询接口.</li>
+</ul>
+</li>
+</ul></div></section><section><div><h2 id="-custompet" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - CustomPet</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">用户调用 <code>mint</code> 为自己生成宠物. 调用 <code>burn</code> 删除宠物.</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="c1">/// @notice 真正的 Token 铸造逻辑. 提案通过后自动调用.</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">mint</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">to</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">memory</span><span class="w"> </span>uri<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">tokenId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>_tokenIdCounter<span class="o">++</span><span class="p">;</span>
+<span class="w">        </span>_safeMint<span class="p">(</span>to<span class="p">,</span><span class="w"> </span>tokenId<span class="p">);</span>
+<span class="w">        </span>_setTokenURI<span class="p">(</span>tokenId<span class="p">,</span><span class="w"> </span>uri<span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="c1">/// @notice 真正的 Token 销毁逻辑. 提案通过后自动调用.</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">burn</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">tokenId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>_burn<span class="p">(</span>tokenId<span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></div></section><section><div><h2 id="-custompet-contd" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - CustomPet (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">注意: 此处为了统计 ERC-721 Token 的数量, 需要符合 <code>ERC721Enumerable</code> 标准.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">借由 <a href="https://github.com/OpenZeppelin/openzeppelin-contracts">OpenZeppelin</a> lib 以简化实现</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="k">contract</span><span class="w"> </span><span class="ni">CustomPet</span><span class="w"> </span><span class="kt">is</span><span class="w"> </span>ERC721URIStorage<span class="p">,</span><span class="w"> </span>ERC721Enumerable<span class="w"> </span><span class="p">{</span>
+</code></pre></div>
+
+<ul class="list-disc font-serif">
+<li class="ml-8">因为多重继承. 重写相关方法</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">tokenURI</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">tokenId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span>virtual<span class="w"> </span>override<span class="p">(</span>ERC721<span class="p">,</span><span class="w"> </span>ERC721URIStorage<span class="p">)</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="w"> </span><span class="nv">memory</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">supportsInterface</span><span class="p">(</span>bytes4<span class="w"> </span>interfaceId<span class="p">)</span>
+<span class="w">    </span><span class="p">...</span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">destroy</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">tokenId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">...</span>
+</code></pre></div></div></section><section><div><h2 id="-customtoken" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - CustomToken</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">这个比较简单. <code>mint</code> &amp; <code>burn</code></li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">mint</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">to</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">amount</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>_mint<span class="p">(</span>to<span class="p">,</span><span class="w"> </span>amount<span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">burn</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">from</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">amount</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>_burn<span class="p">(</span>from<span class="p">,</span><span class="w"> </span>amount<span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></div></section><section><div><h2 id="-exchange" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - Exchange</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">Exchange 工作逻辑: 自己起一个接收 ETH 的辅助作用.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">用户发来 ETH 兑换 CT - 铸造相应数量 CT 给用户.</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">用户发来 CT 兑换 ETH - 销毁 CT, 然后给用户转回 ETH.</p>
+</li>
+</ul>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">当然这过程中涉及到比例因子 <code>k</code> 的换算.</p>
+</li>
+</ul></div></section><section><div><h2 id="-exchange-contd" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - Exchange (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">以 k 汇率兑换 ETH 为 CT</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="c1">/// @notice 以 k 汇率兑换 ETH 为 CT</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">exchangeETHToCT</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">payable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span><span class="k">msg.value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">,</span><span class="w"> </span><span class="s2">"Must send ETH to exchange for CT."</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">ctAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">msg.value</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="w"> </span>ether<span class="w"> </span><span class="o">/</span><span class="w"> </span>k<span class="p">;</span>
+<span class="w">        </span>ct<span class="p">.</span>mint<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>ctAmount<span class="p">);</span>
+<span class="w">        </span>emit<span class="w"> </span>ExchangedETHToCT<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span><span class="k">msg.value</span><span class="p">,</span><span class="w"> </span>ctAmount<span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></div></section><section><div><h2 id="-exchange-contd" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - Exchange (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">以 k 汇率兑换 CT 为 ETH</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">注意换算关系: 1 CT = k ETH. 此处反过来了, 所以要除以 k.</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">exchangeCTToETH</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">ctWeiAmount</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>ctWeiAmount<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">,</span><span class="w"> </span><span class="s2">"Must specify CT amount to exchange for ETH."</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">ethWeiAmount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ctWeiAmount<span class="w"> </span><span class="o">*</span><span class="w"> </span>k<span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="w"> </span>ether<span class="p">;</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span><span class="kt">address</span><span class="p">(</span><span class="kt">this</span><span class="p">).</span>balance<span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span>ethWeiAmount<span class="p">,</span><span class="w"> </span><span class="s2">"There is no sufficient ETH in the exchange."</span><span class="p">);</span>
+<span class="w">        </span>ct<span class="p">.</span>burn<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>ctWeiAmount<span class="p">);</span>
+<span class="w">        </span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="nv">success</span><span class="p">,)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">payable</span><span class="p">(</span><span class="k">msg.sender</span><span class="p">).</span>call<span class="p">{</span>value<span class="o">:</span><span class="w"> </span>ethWeiAmount<span class="p">}(</span><span class="s2">""</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>success<span class="p">,</span><span class="w"> </span><span class="s2">"ETH transfer failed."</span><span class="p">);</span>
+<span class="w">        </span>emit<span class="w"> </span>ExchangedCTToETH<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>ctWeiAmount<span class="p">,</span><span class="w"> </span>ethWeiAmount<span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></div></section><section><div><h2 id="-trade" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - Trade</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">这个比较复杂. 交易行为的一切实现需要多重信息</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="kt">constructor</span><span class="p">(</span>
+<span class="w">        </span><span class="kt">address</span><span class="w"> </span><span class="nv">_seller</span><span class="p">,</span><span class="w">    </span><span class="c1">// 卖方</span>
+<span class="w">        </span><span class="kt">address</span><span class="w"> </span><span class="nv">_buyer</span><span class="p">,</span><span class="w">     </span><span class="c1">// 买方</span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">_duration</span><span class="p">,</span><span class="w">  </span><span class="c1">// 交易持续时间 (有效期)</span>
+<span class="w">        </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">_priceCT</span><span class="p">,</span><span class="w">   </span><span class="c1">// 交易价格 (CT, 买方需要支付的)</span>
+<span class="w">        </span><span class="kt">address</span><span class="w"> </span><span class="nv">_ctAddress</span><span class="p">,</span>
+<span class="w">        </span><span class="kt">address</span><span class="w"> </span><span class="nv">_cpAddress</span>
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">....</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
+<ul class="list-disc font-serif">
+<li class="ml-8">重点: <code>_seller</code>, <code>_buyer</code>, <code>_duration</code>, <code>_priceCT</code></li>
+</ul></div></section><section><div><h2 id="-trade-contd" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - Trade (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">交易创建后, 卖方还需存入需要进行交易的 CP.</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="c1">/// @notice 卖方存入 CP (可多次调用).</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">depositCP</span><span class="p">(</span><span class="kt">uint256</span><span class="p">[]</span><span class="w"> </span><span class="kt">memory</span><span class="w"> </span>tokenIds<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span><span class="k">msg.sender</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>seller<span class="p">,</span><span class="w"> </span><span class="s2">"Only seller can deposit CP."</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>active<span class="p">,</span><span class="w"> </span><span class="s2">"Trade is not active."</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span><span class="w"> </span>i<span class="w"> </span><span class="o">&lt;</span><span class="w"> </span>tokenIds<span class="p">.</span>length<span class="p">;</span><span class="w"> </span>i<span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span>cp<span class="p">.</span>transferFrom<span class="p">(</span>seller<span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">(</span><span class="kt">this</span><span class="p">),</span><span class="w"> </span>tokenIds<span class="p">[</span>i<span class="p">]);</span>
+<span class="w">            </span>depositedCPs<span class="p">.</span>push<span class="p">(</span>tokenIds<span class="p">[</span>i<span class="p">]);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></div></section><section><div><h2 id="-trade-contd" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - Trade (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">买方收到交易, 通过 <code>confirm</code> 确认, 并支付 CT.</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">confirm</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span><span class="k">msg.sender</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>buyer<span class="p">,</span><span class="w"> </span><span class="s2">"Only buyer can confirm trade."</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>active<span class="p">,</span><span class="w"> </span><span class="s2">"Trade is not active."</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span><span class="k">block.timestamp</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span>expiration<span class="p">,</span><span class="w"> </span><span class="s2">"Trade has expired."</span><span class="p">);</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></div></section><section><div><h2 id="-trade-contd" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - Trade (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">卖方随时可以终止交易 <code>cancel</code></li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="c1">/// @notice 卖方取消交易, 退还 CP.</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">cancel</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span><span class="k">msg.sender</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>seller<span class="p">,</span><span class="w"> </span><span class="s2">"Only seller can cancel trade."</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>active<span class="p">,</span><span class="w"> </span><span class="s2">"Trade is not active."</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Return CPs to seller</span>
+<span class="w">        </span>_returnCPs<span class="p">();</span>
+
+<span class="w">        </span>active<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span>
+<span class="w">        </span>emit<span class="w"> </span>TradeCancelled<span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></div></section><section><div><h2 id="-trade-contd" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - Trade (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">注意上述合约过程都在检查 Trade 是否 expired.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">如果 expire 了, <code>require</code> 条件不满足, 上述操作不再能够成功.</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">需要调用 <code>expire</code> 处理交易失效事宜.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="c1">/// @notice 检查并处理过期交易, 退还 CP.</span>
+<span class="w">    </span><span class="c1">/// (当交易过期后, 任何人均可调用此函数来处理过期逻辑. 可考虑写自动化脚本定期调用.)</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">expire</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span><span class="k">block.timestamp</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span>expiration<span class="p">,</span><span class="w"> </span><span class="s2">"Trade has not expired yet."</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">require</span><span class="p">(</span>active<span class="p">,</span><span class="w"> </span><span class="s2">"Trade is not active."</span><span class="p">);</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="w">        </span><span class="c1">// Return CPs to seller</span>
+<span class="w">        </span>_returnCPs<span class="p">();</span>
+<span class="w">        </span><span class="p">...</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+
+<ul class="list-disc font-serif">
+<li class="ml-8">其中 <code>_returnCPs</code> 会处理交易失效逻辑. 将没卖出去的 CP 还给卖方.</li>
+</ul></div></section><section><div><h2 id="-tradefactory" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - TradeFactory</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">这个合约主要管理 Trade 的创建.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">工厂模式设计. Trade 的 constructor 不暴露给用户.</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">用户调用 TradeFactory 的相关方法来创建 Trade.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="c1">/// @notice 创建新的交易实例.</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">createTrade</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_buyer</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">_duration</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">_priceCT</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>Trade<span class="w"> </span>trade<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span>Trade<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>_buyer<span class="p">,</span><span class="w"> </span>_duration<span class="p">,</span><span class="w"> </span>_priceCT<span class="p">,</span><span class="w"> </span>ctAddress<span class="p">,</span><span class="w"> </span>cpAddress<span class="p">);</span>
+<span class="w">        </span>trades<span class="p">.</span>push<span class="p">(</span><span class="kt">address</span><span class="p">(</span>trade<span class="p">));</span>
+
+<span class="w">        </span>emit<span class="w"> </span>TradeCreated<span class="p">(</span><span class="kt">address</span><span class="p">(</span>trade<span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></div></section><section><div><h2 id="-tradefactory-contd" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - TradeFactory (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">TradeFactory 还会记录所有发生过的 Trade. 便于用户查询.</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="c1">/// @notice 获取所有交易实例地址.</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">getTrades</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span><span class="kt">memory</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">return</span><span class="w"> </span>trades<span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div></div></section><section><div><h2 id="-viewer" class="text-xl mt-2 pb-2 font-sans">后端主要实现逻辑 - Viewer</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">本合约专供用户查询信息.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">任何与资产变动相关交易发生, 将会自动记录在 Viewer 上.</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">用户后续可通过 Viewer 查询.</p>
+</li>
+</ul>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">e.g.</p>
+</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">getOwnedCPs</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">user</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">getUserSellingTrades</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">user</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span><span class="kt">memory</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">getUserBuyingTrades</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">user</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span><span class="kt">memory</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">getUserAllTrades</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">user</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span><span class="kt">memory</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</code></pre></div></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">前端原理解析</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">前端原理解析</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">其实 DApp 的开发重头戏往往在后端</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">加之本人对前端技术栈知之甚少.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">做这个项目很多技术栈都是现学现用的 (所以瑕疵不可避免).</li>
+</ul>
+</li>
+</ul><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">从网上道听途说, 先选了 Vite</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">都说这个框架构建静态网站非常友好</li>
+</ul>
+</li>
+</ul></div><div class="fragment" data-fragment-index="2"><ul class="list-disc font-serif">
+<li class="ml-8">后面用熟悉了, 慢慢地自己向前摸索, 有了 React, wagmi 等等</li>
+</ul></div><div class="fragment" data-fragment-index="3"><ul class="list-disc font-serif">
+<li class="ml-8">再后来想稍微美化一下界面, 又用了 <a href="https://ui.shadcn.com/">shadcn</a> 这个 UI lib</li>
+</ul></div></div></section><section><div><h2 id="vite-react" class="text-xl mt-2 pb-2 font-sans">基于 Vite + React 的前端项目框架</h2>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code>.
+├── components.json
+├── src
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+</code></pre></div>
+
+<p class="font-serif my-1">源代码存在 <code>src</code> 目录下</p></div></section><section><div><h2 id="vite-react-contd" class="text-xl mt-2 pb-2 font-sans">基于 Vite + React 的前端项目框架 (cont'd)</h2>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="err">├──</span><span class="w"> </span><span class="n">src</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">abis</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">App</span><span class="o">.</span><span class="n">css</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">App</span><span class="o">.</span><span class="n">tsx</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">assets</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">components</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">constants</span><span class="o">.</span><span class="n">ts</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">hooks</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">index</span><span class="o">.</span><span class="n">css</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">lib</span>
+<span class="err">│</span><span class="w">   </span><span class="err">├──</span><span class="w"> </span><span class="n">main</span><span class="o">.</span><span class="n">tsx</span>
+<span class="err">│</span><span class="w">   </span><span class="err">└──</span><span class="w"> </span><span class="n">pages</span>
+</code></pre></div>
+
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">其中 <code>pages</code> 就是前端网页内容主要源码</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">基于 tsx 文件, 便于编写 HTML 标签</li>
+</ul>
+</li>
+</ul></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">主要源码一览</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1"><code>main.tsx</code></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">借助 React lib. 创建根页面来渲染</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="nx">createRoot</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">'root'</span><span class="p">)</span><span class="o">!</span><span class="p">).</span><span class="nx">render</span><span class="p">(</span>
+<span class="w">  </span><span class="p">&lt;</span><span class="nt">StrictMode</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;</span><span class="nt">Web3Provider</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">BrowserRouter</span><span class="p">&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">App</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">      </span><span class="p">&lt;/</span><span class="nt">BrowserRouter</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">Web3Provider</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">StrictMode</span><span class="p">&gt;</span>
+<span class="p">);</span>
+</code></pre></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">主要源码一览 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1"><code>App.tsx</code></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">用 <code>Route</code> 标签建立子页面路由</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">    </span><span class="p">&lt;</span><span class="nt">Routes</span><span class="p">&gt;</span>
+<span class="w">      </span><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">MainLayout</span><span class="w"> </span><span class="p">/&gt;}&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">index</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">Index</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">"viewer"</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">Viewer</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">"exchange"</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">Exchange</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">"trade"</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">Trade</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">Route</span><span class="w"> </span><span class="na">path</span><span class="o">=</span><span class="s">"pet-manage"</span><span class="w"> </span><span class="na">element</span><span class="o">=</span><span class="p">{&lt;</span><span class="nt">PetManage</span><span class="w"> </span><span class="p">/&gt;}</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="w">      </span><span class="p">&lt;/</span><span class="nt">Route</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">Routes</span><span class="p">&gt;</span>
+</code></pre></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">主要源码一览 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1"><code>pages/viewer.tsx</code></p>
+<ul class="list-disc font-serif">
+<li class="ml-8">定义根组件并用 ES6 语法 <code>export</code>, 根组件再包含子组件</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="kd">function</span><span class="w"> </span><span class="nx">OwnedCPList</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="p">...</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">TradeList</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="p">...</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">Viewer</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="p">...</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">OwnedCPList</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="p">...</span>
+<span class="w">        </span><span class="p">&lt;</span><span class="nt">TradeList</span><span class="w"> </span><span class="p">/&gt;</span>
+<span class="p">...</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Viewer</span><span class="p">;</span>
+</code></pre></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">主要源码一览 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">其他子页面也是类似操作</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="kd">function</span><span class="w"> </span><span class="nx">Trade</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="p">...</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">Trade</span><span class="p">;</span>
+</code></pre></div>
+
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="kd">function</span><span class="w"> </span><span class="nx">PetManage</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span>
+<span class="w">    </span><span class="p">...</span>
+<span class="w">  </span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">PetManage</span><span class="p">;</span>
+</code></pre></div></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="dapp" class="text-2xl mt-2 font-sans">DApp部署/上链方式</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">后端部署方式</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">由于后端基于 <a href="https://getfoundry.sh/">Foundry</a> 框架. 故需要编写 script</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="k">contract</span><span class="w"> </span><span class="ni">DeployScript</span><span class="w"> </span><span class="kt">is</span><span class="w"> </span>Script<span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">run</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="p">...</span>
+
+<span class="w">        </span><span class="c1">// 1. Initialise tokens</span>
+<span class="w">        </span>CustomToken<span class="w"> </span>ct<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span>CustomToken<span class="p">();</span>
+<span class="w">        </span>CustomPet<span class="w"> </span>cp<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span>CustomPet<span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// 2. Initialise exchange</span>
+<span class="w">        </span><span class="c1">// Initially: k = 1 ether = 10^18 wei</span>
+<span class="w">        </span>Exchange<span class="w"> </span>exchange<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span>Exchange<span class="p">(</span>ct<span class="p">,</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="w"> </span>ether<span class="p">);</span>
+</code></pre></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">后端部署方式 (cont'd)</h2>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">        </span><span class="c1">// 3. Initialise trade factory</span>
+<span class="w">        </span>TradeFactory<span class="w"> </span>tradeFactory<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span>TradeFactory<span class="p">(</span><span class="kt">address</span><span class="p">(</span>ct<span class="p">),</span><span class="w"> </span><span class="kt">address</span><span class="p">(</span>cp<span class="p">));</span>
+
+<span class="w">        </span><span class="c1">// 4. Initialise viewer</span>
+<span class="w">        </span>Viewer<span class="w"> </span>viewer<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">new</span><span class="w"> </span>Viewer<span class="p">(</span>cp<span class="p">,</span><span class="w"> </span>tradeFactory<span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// 5. Output deployed addresses</span>
+<span class="w">        </span><span class="p">...</span>
+
+<span class="w">        </span>vm<span class="p">.</span>stopBroadcast<span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">后端部署方式 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">编写好脚本后, 确定自己要部署到哪条区块链上. 取得相应 RPC URL</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">运行 <code>forge script script/Deploy.s.sol:DeployScript --rpc-url $RPC_URL --broadcast --private-key $PRIVATE_KEY</code></p>
+</li>
+</ul></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">前端部署方式</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">由于基于 Vite 框架, 所以非常简单.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">Vite 脚手架已经给我们写好了命令</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="w">  </span><span class="nt">"scripts"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"dev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vite"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"build"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tsc -b &amp;&amp; vite build"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"lint"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eslint ."</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"preview"</span><span class="p">:</span><span class="w"> </span><span class="s2">"vite preview"</span>
+<span class="w">  </span><span class="p">},</span>
+</code></pre></div>
+
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">直接 <code>pnpm build</code> (或者如果用 <code>npm</code> 或 <code>yarn</code> 的话, 换成相应的命令)</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">接着在 <code>dist</code> 目录下就得到了构建好的静态文件</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">将其部署到静态 Web 服务器上即可.</li>
+</ul>
+</li>
+</ul></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">总结与反思</h1></div></div></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">实习总结</h2><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">这接连两周目的实训, 给我收获颇丰</li>
+</ul></div><div class="fragment" data-fragment-index="2"><ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">最初完全不懂 block chain 是啥?</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">还以为是 "炒币的" "投机分子" 干的勾当 😂 (国家确实在严厉打击)</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">但深入与老师交流后, 才洞悉其背后的技术价值精髓❗❗</p>
+</li>
+</ul>
+</li>
+</ul></div><div class="fragment" data-fragment-index="3"><ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">这涉及到伦理层面的东西了</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">任何事物都有两面性. 取其精华, 弃其糟粕.</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">任何事物并不是非黑即白的. 对人对事, 需要建立全面认知, 切忌片面定论.</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">当初 AI 大模型 🤖 技术, 刚出来时, 也有人讨论过这个话题. (值得商榷)</p>
+</li>
+</ul>
+</li>
+</ul></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">实习总结 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">同时给我的编程素养也有很大提升</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">如何提升自我修养, 做一个高素质人才/高品质 IT 从业者</li>
+</ul>
+</li>
+</ul><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">我们学院派 (Academia) 缺乏工程 (Software Enginerring) 实践经验.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">通过这次实习, 作为一个 window, 能够窥探区块链行业动态</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">同时学习到, 如何成为优秀的区块链工程师</p>
+</li>
+</ul>
+</li>
+</ul></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">实习总结 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">我自己学了很多知识</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">诸如 <a href="https://www.wolai.com/wNHsVqiwtd5yvSYexzkBE4">大佬三连</a>, <a href="https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md">提问的智慧</a></p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">但很多都停留在纸面上/字里行间, 没有 "Make Your Hands Dirty"</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">激发自己的实操兴趣. "兴趣是最好的老师."</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">也只有自己亲手 "码" 了项目, 才能对 <code>STFW</code>, <a href="https://baoyu.io/translations/what-is-xyproblem"><code>XY问题</code></a> 等极客圈词汇有更清晰的认知.</p>
+</li>
+</ul>
+</li>
+</ul></div></section><section><div><h2 id="_1" class="text-xl mt-2 pb-2 font-sans">自己的不足与反思</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">当然, 自己在完成实习项目过程中也难免有纰漏</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">对于前端框架的生疏, 导致需要额外付出学习成本</p>
+</li>
+</ul><div class="fragment" data-fragment-index="1"><ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">对于以太坊智能合约的执行原理也浅尝辄止</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">只知道 <a href="https://ethereum.org/zh/developers/docs/evm/">EVM</a> 工作的大致模型</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">间接导致写合约时过于复杂的代码逻辑难以理清</p>
+</li>
+</ul>
+</li>
+</ul></div><div class="fragment" data-fragment-index="2"><ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">也是因为上述种种原因, 代码的测试也无从下手</p>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">自己缺乏软件工程实战经验, 不知道咋写 Unit Tests</p>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">进而导致 Debug 能力也欠缺. (更不用说在技术栈/框架都是完全陌生的基础上.)</p>
+</li>
+</ul>
+</li>
+</ul></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">自己的不足与反思 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">实际上, 以下是我最初所立下的项目需求的原始版本草稿.</li>
+</ul>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="mf">1.</span><span class="w"> </span><span class="n">本</span><span class="w"> </span><span class="n">DApp</span><span class="w"> </span><span class="n">依靠自定义的</span><span class="w"> </span><span class="n">ERC</span><span class="o">-</span><span class="mi">20</span><span class="w"> </span><span class="n">Token</span><span class="w"> </span><span class="n">运行</span><span class="p">.</span><span class="w"> </span><span class="n">该</span><span class="w"> </span><span class="n">Token</span><span class="w"> </span><span class="n">名称为</span><span class="w"> </span><span class="n n-Quoted">`CustomToken`</span><span class="w"> </span><span class="p">(</span><span class="n">缩写为</span><span class="w"> </span><span class="n n-Quoted">`CT`</span><span class="p">),</span><span class="w"> </span><span class="n">由</span><span class="w"> </span><span class="n">ETH</span><span class="w"> </span><span class="n">按一定比例</span><span class="w"> </span><span class="p">(</span><span class="n">汇率</span><span class="p">)</span><span class="w"> </span><span class="n">换算后兑换</span><span class="p">,</span><span class="w"> </span><span class="n">公式为</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="n">ETH</span><span class="p">,</span><span class="w"> </span><span class="n">其中</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="n">为兑换比例系数</span><span class="p">.</span><span class="w"> </span><span class="n">用户可用</span><span class="w"> </span><span class="n">ETH</span><span class="w"> </span><span class="n">兑换</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="n">也可以将自己的</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">自由兑换回</span><span class="w"> </span><span class="n">ETH</span><span class="p">,</span><span class="w"> </span><span class="n">但一切行为均需实时按照当前汇率来换算</span><span class="p">.</span><span class="w"> </span><span class="n">该系数可以后期手动调整</span><span class="p">,</span><span class="w"> </span><span class="n">调整需由委员会表决</span><span class="p">.</span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">本</span><span class="w"> </span><span class="n">DApp</span><span class="w"> </span><span class="n">采取</span><span class="w"> </span><span class="s2">"委员会治理"</span><span class="w"> </span><span class="n">模式</span><span class="p">,</span><span class="w"> </span><span class="n">基于委员会共识机制运行</span><span class="p">.</span><span class="w"> </span><span class="n">用户若要加入委员会</span><span class="p">,</span><span class="w"> </span><span class="n">需向委员会质押</span><span class="w"> </span><span class="n">ETH</span><span class="p">.</span><span class="w"> </span><span class="n">该质押量对于各个用户来说都可以调整</span><span class="p">,</span><span class="w"> </span><span class="n">用户在质押后可以人为添加质押量</span><span class="p">,</span><span class="w"> </span><span class="n">也可以取回自己质押的</span><span class="w"> </span><span class="n">ETH</span><span class="p">.</span><span class="w"> </span><span class="n">若用户将自己质押的</span><span class="w"> </span><span class="n">ETH</span><span class="w"> </span><span class="n">完全取回</span><span class="p">,</span><span class="w"> </span><span class="n">代表退出委员会</span><span class="p">.</span>
+<span class="mf">3.</span><span class="w"> </span><span class="n">本</span><span class="w"> </span><span class="n">DApp</span><span class="w"> </span><span class="n">中发行一种基于</span><span class="w"> </span><span class="n">ERC</span><span class="o">-</span><span class="mi">721</span><span class="w"> </span><span class="n">的</span><span class="w"> </span><span class="n">Token</span><span class="p">,</span><span class="w"> </span><span class="n">名为</span><span class="w"> </span><span class="n n-Quoted">`CustomPet`</span><span class="w"> </span><span class="p">(</span><span class="n">缩写为</span><span class="w"> </span><span class="n n-Quoted">`CP`</span><span class="p">).</span><span class="w"> </span><span class="n">该</span><span class="w"> </span><span class="n">Token</span><span class="w"> </span><span class="n">的</span><span class="w"> </span><span class="n">mint</span><span class="w"> </span><span class="n">与</span><span class="w"> </span><span class="n">destroy</span><span class="w"> </span><span class="n">行为</span><span class="p">,</span><span class="w"> </span><span class="n">均由委员会管理</span><span class="p">.</span><span class="w"> </span><span class="n">在</span><span class="w"> </span><span class="n">mint</span><span class="w"> </span><span class="n">该</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="n">时</span><span class="p">,</span><span class="w"> </span><span class="n">需同时指定要</span><span class="w"> </span><span class="n">mint</span><span class="w"> </span><span class="n">的</span><span class="w"> </span><span class="n">token</span><span class="w"> </span><span class="n">的</span><span class="w"> </span><span class="n">URI</span><span class="w"> </span><span class="n">作为其详细信息</span><span class="p">.</span>
+<span class="mf">4.</span><span class="w"> </span><span class="n">委员会单独管理一个账户地址</span><span class="p">,</span><span class="w"> </span><span class="n">专门用于存放委员会名下的各种资产</span><span class="w"> </span><span class="p">(</span><span class="n">ETH</span><span class="p">,</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="n">CP</span><span class="p">).</span><span class="w"> </span><span class="n">该账户地址具有商店机制</span><span class="p">,</span><span class="w"> </span><span class="n">可选择该机制是否开启或者关闭</span><span class="p">,</span><span class="w"> </span><span class="n">商店中对所陈列的各种</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">Token</span><span class="w"> </span><span class="n">进行标价</span><span class="p">;</span><span class="w"> </span><span class="n">其中商店的开启与关闭</span><span class="w"> </span><span class="p">(</span><span class="n">默认关闭</span><span class="p">),</span><span class="w"> </span><span class="n">商店中</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">的上架</span><span class="p">,</span><span class="w"> </span><span class="n">各个</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">Token</span><span class="w"> </span><span class="n">的定价</span><span class="p">,</span><span class="w"> </span><span class="n">均需由委员会表决</span><span class="p">.</span><span class="w"> </span><span class="n">当商店功能开启时</span><span class="p">,</span><span class="w"> </span><span class="n">用户可从该账户地址以指定数量的</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">Token</span><span class="w"> </span><span class="n">从该账户购买</span><span class="w"> </span><span class="n">CP</span><span class="p">,</span><span class="w"> </span><span class="n">亦可向该账户发送自己的</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">以换取</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">Token</span><span class="p">.</span><span class="w"> </span><span class="n">其中</span><span class="o">:</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">商店上架</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">时</span><span class="p">,</span><span class="w"> </span><span class="n">应同时指定该</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">的</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">价格</span><span class="p">.</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">以</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">买</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">时</span><span class="p">,</span><span class="w"> </span><span class="n">所提供的</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">应该足够支付相应</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">的价格</span><span class="p">.</span><span class="w"> </span><span class="n">若支付的</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">不足</span><span class="p">,</span><span class="w"> </span><span class="n">则购买失败并退回所有</span><span class="w"> </span><span class="n">CT</span><span class="p">.</span><span class="w"> </span><span class="n">若支付超额</span><span class="p">,</span><span class="w"> </span><span class="n">则退还多余部分</span><span class="w"> </span><span class="n">CT</span><span class="p">.</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">以</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">换</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">时</span><span class="p">,</span><span class="w"> </span><span class="n">所兑换的相应</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">数量的计算方式为</span><span class="o">:</span><span class="w"> </span><span class="n">对商店中当前上架的所有</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">的价格取平均值</span><span class="p">,</span><span class="w"> </span><span class="n">记其为</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">CT</span><span class="p">;</span><span class="w"> </span><span class="n">然后对每个发送给当前账户的</span><span class="w"> </span><span class="n">CP</span><span class="p">,</span><span class="w"> </span><span class="n">在</span><span class="w"> </span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">开区间内取随机数</span><span class="p">,</span><span class="w"> </span><span class="n">该随机数的种子为当前交易的</span><span class="w"> </span><span class="n">blockNumber</span><span class="p">,</span><span class="w"> </span><span class="n">最后累加起来得到应该返还给用户的</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">数量</span><span class="p">.</span><span class="w"> </span><span class="n">不过在返还前需先检查当前商店账户中的</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">余额是否足够传送</span><span class="p">,</span><span class="w"> </span><span class="n">若不够则交易失败</span><span class="p">,</span><span class="w"> </span><span class="n">应回退本次交易</span><span class="w"> </span><span class="p">(</span><span class="n">即</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">无任何变动</span><span class="p">,</span><span class="w"> </span><span class="n">用户提供的</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">回退给用户</span><span class="p">).</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">在上述功能中</span><span class="p">,</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">买</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">换</span><span class="w"> </span><span class="n">CP</span><span class="p">,</span><span class="w"> </span><span class="n">这些功能均有开关选项</span><span class="p">,</span><span class="w"> </span><span class="n">可以控制开启或者关闭</span><span class="w"> </span><span class="p">(</span><span class="n">默认关闭</span><span class="p">).</span><span class="w"> </span><span class="n">若相关功能关闭</span><span class="p">,</span><span class="w"> </span><span class="n">用户发起调用相应功能的交易时则直接失败</span><span class="p">,</span><span class="w"> </span><span class="n">回退交易</span><span class="p">.</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">只有委员会成员能够向该账户传送资产或者提取资产</span><span class="p">.</span><span class="w"> </span><span class="n">传送方式为直接向该地址</span><span class="w"> </span><span class="n">send</span><span class="w"> </span><span class="n">资产</span><span class="w"> </span><span class="p">(</span><span class="n">注</span><span class="o">:</span><span class="w"> </span><span class="n">此时</span><span class="w"> </span><span class="o">**</span><span class="n">不是</span><span class="o">**</span><span class="w"> </span><span class="n">调用商店功能的意思</span><span class="p">,</span><span class="w"> </span><span class="n">单纯的传送资产</span><span class="p">),</span><span class="w"> </span><span class="n">提取方式为该地址有个接口功能</span><span class="p">,</span><span class="w"> </span><span class="n">调用该接口并指定资产类型和数量后</span><span class="p">,</span><span class="w"> </span><span class="n">地址自动发送相应种类的数量和资产给调用者</span><span class="p">.</span><span class="w"> </span><span class="n">这些所有行为</span><span class="p">,</span><span class="w"> </span><span class="n">均需经过委员会表决</span><span class="p">.</span>
+</code></pre></div></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">自己的不足与反思 (cont'd)</h2>
+<div class="codehilite"><pre class="bg-gray-100 overflow-x-auto rounded p-2 mb-2 mt-2"><span/><code><span class="mf">5.</span><span class="w"> </span><span class="n">委员会管理</span><span class="w"> </span><span class="p">(</span><span class="n">需进行表决</span><span class="p">)</span><span class="w"> </span><span class="n">的事项如下</span><span class="p">:</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">与</span><span class="w"> </span><span class="n">ETH</span><span class="w"> </span><span class="n">之间的汇率系数</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="n">的调整</span><span class="mf">.</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">的</span><span class="w"> </span><span class="n">mint</span><span class="mf">.</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">的</span><span class="w"> </span><span class="n">destroy</span><span class="mf">.</span>
+<span class="w">    </span><span class="o">-</span><span class="w"> </span><span class="n">修改表决时间</span><span class="w"> </span><span class="n">t</span><span class="mf">.</span><span class="w"> </span><span class="p">(</span><span class="n">表决时间默认值为</span><span class="w"> </span><span class="mf">30</span><span class="w"> </span><span class="n">秒</span><span class="p">)</span>
+<span class="w">    </span><span class="n">其中的每个事项均有发起者</span><span class="mf">.</span><span class="w"> </span><span class="n">当事项发起后</span><span class="p">,</span><span class="w"> </span><span class="n">会自动创建针对相应事项的表决合约</span><span class="p">,</span><span class="w"> </span><span class="n">其中表决时间以当前</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="n">值</span><span class="w"> </span><span class="p">(</span><span class="n">定义见上</span><span class="p">)</span><span class="w"> </span><span class="n">为准</span><span class="mf">.</span><span class="w"> </span><span class="n">在表决时间之内</span><span class="p">,</span><span class="w"> </span><span class="n">所有委员会成员均可调用该合约的投票函数</span><span class="p">,</span><span class="w"> </span><span class="n">投下自己是赞成该事项或者是反对该事项</span><span class="p">,</span><span class="w"> </span><span class="n">每个成员仅能投一票</span><span class="mf">.</span><span class="w"> </span><span class="n">表决时间到时</span><span class="p">,</span><span class="w"> </span><span class="n">该合约将统计票数</span><span class="p">,</span><span class="w"> </span><span class="n">并计算赞成票的加权比例</span><span class="mf">.</span><span class="w"> </span><span class="n">加权的计算方式为自己投的票的种类</span><span class="p">,</span><span class="w"> </span><span class="n">乘以自己质押的</span><span class="w"> </span><span class="n">ETH</span><span class="w"> </span><span class="n">数量作为话语权因子</span><span class="p">;</span><span class="w"> </span><span class="n">加权比例的计算方式是</span><span class="p">,</span><span class="w"> </span><span class="n">该票种的权重除以所有票种的权重的总和</span><span class="mf">.</span><span class="w"> </span><span class="n">若最终所得到的赞成票的加权比例大于或者等于</span><span class="w"> </span><span class="mf">50</span><span class="err">%</span><span class="w"> </span><span class="n">则相应的事项最终生效</span><span class="p">,</span><span class="w"> </span><span class="n">反之失效</span><span class="w"> </span><span class="p">(</span><span class="n">注</span><span class="p">:</span><span class="w"> </span><span class="n">若总票数为</span><span class="w"> </span><span class="mf">0</span><span class="w"> </span><span class="n">即无人投票</span><span class="p">,</span><span class="w"> </span><span class="n">视为失效</span><span class="p">)</span><span class="mf">.</span><span class="w"> </span><span class="n">所有委员会成员均有权利查看当前正在进行的所有表决事项</span><span class="p">,</span><span class="w"> </span><span class="n">并选定任意一个事项参与投票</span><span class="mf">.</span><span class="w"> </span><span class="n">所有用户</span><span class="w"> </span><span class="p">(</span><span class="n">即使不是委员会成员</span><span class="p">)</span><span class="w"> </span><span class="n">均有权利查看所有表决事项</span><span class="w"> </span><span class="p">(</span><span class="n">正在进行的以及已结束的历史事项</span><span class="p">)</span><span class="w"> </span><span class="n">的信息</span><span class="p">,</span><span class="w"> </span><span class="n">但是只有委员会成员可以参与投票</span><span class="mf">.</span>
+<span class="mf">6.</span><span class="w"> </span><span class="n">所有用户对于自己所拥有的</span><span class="w"> </span><span class="n">CP</span><span class="p">,</span><span class="w"> </span><span class="n">均可创建一个交易合约</span><span class="p">,</span><span class="w"> </span><span class="n">指定卖方</span><span class="w"> </span><span class="p">(</span><span class="n">自己</span><span class="p">)</span><span class="w"> </span><span class="n">以及目标买方</span><span class="p">,</span><span class="w"> </span><span class="n">同时指定一个交易有效期</span><span class="p">,</span><span class="w"> </span><span class="n">以及交易价格</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="p">(</span><span class="n">只能用</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">进行交易</span><span class="p">)</span><span class="mf">.</span><span class="w"> </span><span class="n">卖方也要同时将自己需要交易的</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="p">(</span><span class="n">可以放多个</span><span class="p">,</span><span class="w"> </span><span class="n">不止一个</span><span class="p">)</span><span class="w"> </span><span class="n">放入该合约中</span><span class="mf">.</span><span class="w"> </span><span class="n">买方需要在交易有效期内向该交易合约发送足够数量的</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">来确认交易</span><span class="mf">.</span><span class="w"> </span><span class="n">交易确认后</span><span class="p">,</span><span class="w"> </span><span class="n">买方将收到该交易合约中的所有</span><span class="w"> </span><span class="n">CP</span><span class="p">,</span><span class="w"> </span><span class="n">卖方将收到自己当初指定的数量的</span><span class="w"> </span><span class="n">CT</span><span class="mf">.</span><span class="w"> </span><span class="n">注意若买方支付了过额的</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="n">应将多余部分退回买方</span><span class="p">;</span><span class="w"> </span><span class="n">若买方支付的</span><span class="w"> </span><span class="n">CT</span><span class="w"> </span><span class="n">不足</span><span class="p">,</span><span class="w"> </span><span class="n">则退还全部</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="n">但交易一直保持有效</span><span class="p">,</span><span class="w"> </span><span class="n">直到过期</span><span class="mf">.</span><span class="w"> </span><span class="n">交易过期后</span><span class="p">,</span><span class="w"> </span><span class="n">卖方将收到来自该交易合约退还的</span><span class="w"> </span><span class="n">CP</span><span class="mf">.</span><span class="w"> </span><span class="n">卖方如果有需要</span><span class="p">,</span><span class="w"> </span><span class="n">可以手动取消交易</span><span class="p">,</span><span class="w"> </span><span class="n">此时交易合约将在有效期前提前失效</span><span class="mf">.</span><span class="w"> </span><span class="n">交易失效后</span><span class="p">,</span><span class="w"> </span><span class="n">买方不应当向该交易合约再发送任何</span><span class="w"> </span><span class="n">CT</span><span class="p">,</span><span class="w"> </span><span class="n">即使发送了也应该回退</span><span class="mf">.</span>
+<span class="mf">7.</span><span class="w"> </span><span class="n">所有用户均有权利查看自己账户下面所拥有的所有</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">以及各</span><span class="w"> </span><span class="n">CP</span><span class="w"> </span><span class="n">的详细信息</span><span class="p">,</span><span class="w"> </span><span class="n">以及自己发起过的所有交易</span><span class="w"> </span><span class="p">(</span><span class="n">完成的</span><span class="o">/</span><span class="n">失效的</span><span class="o">/</span><span class="n">正在进行的</span><span class="p">)</span><span class="mf">.</span>
+</code></pre></div>
+
+<ul class="list-disc font-serif">
+<li class="ml-8">但是后面发现需求过于庞大. 不得不疯狂剔除精简, 最终只剩下骨干.</li>
+</ul></div></section><section><div><h2 id="contd" class="text-xl mt-2 pb-2 font-sans">自己的不足与反思 (cont'd)</h2>
+<ul class="list-disc font-serif">
+<li class="ml-8">
+<p class="font-serif my-1">所以, 在软件工程中 "好高骛远" 是绝对不可取的.</p>
+<ul class="list-disc font-serif">
+<li class="ml-8"><a href="https://www.iso.org/standard/72089.html">ISO/IEC/IEEE 29148 标准</a></li>
+</ul>
+</li>
+<li class="ml-8">
+<p class="font-serif my-1">始终立足平地, 才能行稳致远.</p>
+</li>
+</ul></div></section></section><section><section><div class="center middle"><div style="width:100%"><div><h1 id="_1" class="text-2xl mt-2 font-sans">谢谢聆听</h1>
+<p class="font-serif my-1"><br/></p>
+<blockquote>
+<p class="font-serif my-1">不足之处, 烦请斧正</p>
+</blockquote></div></div></div></section></section>
+        </div>
+    </div>
+
+    <script src="./static/reveal/reveal.js"></script>
+
+    <script>
+        Reveal.initialize({
+
+            width: 1024, height: 768,
+
+            slideNumber: 'c/t',
+            controlsTutorial: false,
+            progress: false,
+            hash: true,
+            center: false,
+            autoAnimateUnmatched: true,
+            autoAnimateEasing: 'ease-out',
+            autoAnimateDuration: 0.3,
+            transitionSpeed: 'fast'
+        });
+    </script>
+</body>
+
+</html>
